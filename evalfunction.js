@@ -1,0 +1,3 @@
+const funstring = 'const inverterStatus=(t,e)=>{const n={0:"inv-stop-mode",2:"inv-stndby-mode",3:"inv-grid-connected-mode",5:"inv-power-limit-stop-mode",6:"inv-fault-mode",7:"inv-power-limit-mode",8:"inv-derating-fault-mode"};if(!e)return"inv-comm-error";if(t === null || t === undefined)return"inv-status-error";const i=t.toString(2).padStart(16,"0").split("").reverse().map(t=>"1"===t),o=Object.keys(n).map(t=>({status:i[t],code:n[t]})).find(t=>t.status);return o?o.code:"inv-running-mode"}; return inverterStatus(statustag, communicationtag)';
+const myfunc = new Function(['statustag', 'communicationtag'], funstring);
+console.log(myfunc(5, true));
