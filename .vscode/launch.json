@@ -10,6 +10,6 @@
         "skipFiles": [
             "<node_internals>/**"
         ],
-        "program": "${workspaceFolder}/urlcheck.js"
+        "program": "${workspaceFolder}/percentage.js"
     }]
 }
