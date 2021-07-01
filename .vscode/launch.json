@@ -10,6 +10,6 @@
         "skipFiles": [
             "<node_internals>/**"
         ],
-        "program": "${workspaceFolder}/percentage.js"
+        "program": "${workspaceFolder}/node-scheduler.js"
     }]
 }

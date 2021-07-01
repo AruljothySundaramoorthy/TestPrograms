@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^2.21.3",
-    "dates-generator": "^1.0.3"
+    "cron-parser": "^3.5.0",
+    "date-fns": "^2.22.1",
+    "dates-generator": "^1.0.3",
+    "lodash": "^4.17.21",
+    "node-cron": "^3.0.0",
+    "node-schedule": "^2.0.0"
   }
 }
