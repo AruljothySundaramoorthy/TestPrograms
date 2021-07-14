@@ -8,6 +8,7 @@ schedule.scheduleJob('joba - cronid ', '*/2 * * * * *', function (time) {
 
 });
 
+const schedule = require('node-schedule');
 schedule.scheduleJob('jobb', '*/3 * * * * *', function (time) {
 
     console.log(this.name);
@@ -16,5 +17,3 @@ schedule.scheduleJob('jobb', '*/3 * * * * *', function (time) {
 process.stdin.resume();
 
 
-1. function builder for testings
-2.
