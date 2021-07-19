@@ -1,6 +1,6 @@
 function loadscadaheatmap(e) {
     let statustag = '';
-    switch (e.parameters.IS_HEALTHY) {
+    switch (e.parameters?.IS_HEALTHY) {
         case !e.parameters.IS_HEALTHY:
             statustag = 'inv-comm-error';
             break;
