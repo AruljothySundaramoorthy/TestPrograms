@@ -24,7 +24,13 @@ if (cluster.isMaster) {
 
     app.get('/', (req, res) => {
         console.log('hit')
-        res.send('Hello World!');
+
+        const input = [8899487365533, 9488757646364554, 8899487365533, 94887576463645548899487365533, 94887576463645548899487365533, 9488757646364554];
+        const output = input.reduce((accumulator, currentValue) => accumulator += currentValue);
+        const output2 = input.reduce((accumulator, currentValue) => accumulator *= currentValue);
+        console.log(`Hello World! ${output} ${output2}`); // 28
+
+        res.send(`Hello World! ${output}`);
     })
 
     app.get('/api/:n', function (req, res) {
