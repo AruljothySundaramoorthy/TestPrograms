@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "cron-parser": "^3.5.0",
-    "date-fns": "^2.22.1",
+    "date-fns": "^2.23.0",
     "dates-generator": "^1.0.3",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
