@@ -2,7 +2,7 @@
   "name": "exercises",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "server2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
@@ -14,7 +14,7 @@
     "cron-parser": "^3.5.0",
     "date-fns": "^2.23.0",
     "dates-generator": "^1.0.3",
-    "exceljs": "^4.2.1",
+    "exceljs": "^4.3.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "mssql": "^7.1.3",
