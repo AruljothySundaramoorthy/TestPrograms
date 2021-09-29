@@ -17,7 +17,7 @@ try {
     const lodash = require("lodash");
     const workbook = new ExcelJS.Workbook();
 
-    var tempdata = {};
+    var tempdevicedata = {};
     let firstdata = data[0].devices;
     let lastdata = data[data.length - 1].devices;
     const listofparameters = parameters;
@@ -39,7 +39,7 @@ try {
                 unit: '-'
             },
         };
-        tempdata = { ...tempdata, ...newtempdata };
+        tempdevicedata = { ...tempdevicedata, ...newtempdata };
     });
 
     let inverterdevices = {};
@@ -57,7 +57,7 @@ try {
     let plantstoptime;
     let plantrunninghours;
     let plantperformanceration = 0;
-    Object.entries(tempdata).map((x) => {
+    Object.entries(tempdevicedata).map((x) => {
         if (x[1].devicemeta.devicetypeid === 3) {
             inverterdevices = { ...inverterdevices, ...{ [x[0]]: x[1] } };
         }
@@ -82,44 +82,17 @@ try {
         }
     });
 
-
     // MIN & MAX value logic
-    let tempminwmspoa = [];
-    let tempwmsmaxpoa = [];
+
     let overalltempwmspoa = [];
-    let tempminwmsghi = [];
-    let tempwmsmaxghi = [];
     let overalltempwmsghi = [];
-    let tempminwmswindspeed = [];
-    let tempwmsmaxwindspeed = [];
     let overalltempwmswindspeed = [];
-    let tempminwmsrelativehumidity = [];
-    let tempwmsmaxrelativehumidity = [];
     let overalltempwmsrelativehumidity = [];
-    Object.keys(wmsdevices).forEach((y) => {
-        let tempwmspoaminvalue = lodash.minBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_POA))
-        tempminwmspoa.push(tempwmspoaminvalue.devices[y].parameters.WMS_POA)
-        let tempwmspoamaxvalue = lodash.maxBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_POA))
-        tempwmsmaxpoa.push(tempwmspoamaxvalue.devices[y].parameters.WMS_POA)
 
-        let tempwmsghiminvalue = lodash.minBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_GHI))
-        tempminwmsghi.push(tempwmsghiminvalue.devices[y].parameters.WMS_GHI)
-        let tempwmsghimaxvalue = lodash.maxBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_GHI))
-        tempwmsmaxghi.push(tempwmsghimaxvalue.devices[y].parameters.WMS_GHI)
+    let tempminwmsmoduletemperature = [];
+    let tempminwmsambienttemperature = [];
 
-        let tempwmswindspeedminvalue = lodash.minBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_WND_SPD))
-        tempminwmswindspeed.push(tempwmswindspeedminvalue.devices[y].parameters.WMS_WND_SPD)
-        let tempwmswindspeedmaxvalue = lodash.maxBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_WND_SPD))
-        tempwmsmaxwindspeed.push(tempwmswindspeedmaxvalue.devices[y].parameters.WMS_WND_SPD)
-
-        let tempwmsrelativehumidityminvalue = lodash.minBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_HUM))
-        tempminwmsrelativehumidity.push(tempwmsrelativehumidityminvalue.devices[y].parameters.WMS_HUM)
-        let tempwmsrelativehumiditymaxvalue = lodash.maxBy(Object.values(data), ((x) => x.devices[y].parameters.WMS_HUM))
-        tempwmsmaxrelativehumidity.push(tempwmsrelativehumiditymaxvalue.devices[y].parameters.WMS_HUM)
-    });
     Object.keys(pqmdevices).forEach((y) => {
-        let temppeekpower = lodash.maxBy(Object.values(data), ((x) => x.devices[y].parameters.PQM_ACT_PWR))
-        peekpower.push(temppeekpower.devices[y].parameters.PQM_ACT_PWR)
         let tempexportvalueunit = listofparameters.find((f) => f.parametername == 'PQM_TOT_ACT_EXP')
         let minpqmexportvalues = lodash.minBy(Object.values(data), ((x) => x.devices[y].parameters.PQM_TOT_ACT_EXP))
         pqmdevices[y].minexportvalue = minpqmexportvalues.devices[y].parameters.PQM_TOT_ACT_EXP || 0;
@@ -248,15 +221,23 @@ try {
 
             let temppoa = [];
             let tempghi = [];
+            let tempvalminwmsghi = [];
+            let tempvalminwmspoa = [];
+            let tempvalminwmswindspeed = [];
+            let tempvalminwmsrelativehumiduty = [];
+            let tempmoduletemp = [];
+            let tempambienttemp = [];
             Object.values(e.devices).forEach((ed) => {
 
 
                 if (ed.devicemeta.devicetypeid == 7) {
                     let tempmodulevalue = [];
-                    overalltempwmswindspeed.push(ed.parameters.WMS_WND_SPD);
-                    overalltempwmsrelativehumidity.push(ed.parameters.WMS_HUM)
+                    tempvalminwmswindspeed.push(ed.parameters.WMS_WND_SPD);
+                    tempvalminwmsrelativehumiduty.push(ed.parameters.WMS_HUM)
+
                     if (ed.parameters.WMS_GHI > 0) {
-                        overalltempwmsghi.push(ed.parameters.WMS_GHI)
+
+                        tempvalminwmsghi.push(ed.parameters.WMS_GHI)
                         tempghi.push(
                             parseFloat(
                                 isNaN(ed.parameters.WMS_GHI)
@@ -269,6 +250,7 @@ try {
 
                     if (ed.parameters.WMS_POA > 0) {
                         overalltempwmspoa.push(ed.parameters.WMS_POA)
+                        tempvalminwmspoa.push(ed.parameters.WMS_POA)
                         temppoa.push(
                             parseFloat(
                                 isNaN(ed.parameters.WMS_POA)
@@ -280,6 +262,7 @@ try {
                     }
 
                     wmsambienttemp.push(
+
                         parseFloat(
                             isNaN(ed.parameters.WMS_AMB_TEMP)
                                 ? 0
@@ -287,6 +270,7 @@ try {
                             0
                         )
                     );
+                    tempambienttemp.push(ed.parameters.WMS_AMB_TEMP);
                     if (ed.parameters.WMS_MDL_TEMP1 > 1) {
                         tempmodulevalue.push(ed.parameters.WMS_MDL_TEMP1 || 0);
                     }
@@ -305,18 +289,30 @@ try {
                     )
                         ? 0
                         : lodash.sumBy(tempmodulevalue) / tempmodulevalue.length;
-
+                    tempmoduletemp.push(tempvalues);
                     wmssurtemp.push(tempvalues);
                 }
+
             });
             wmspoa.push(lodash.sumBy(temppoa) / temppoa.length)
             wmsghi.push(lodash.sumBy(tempghi) / tempghi.length)
+            if (tempvalminwmsghi.length > 0) {
+
+                overalltempwmsghi.push(isNaN(lodash.meanBy(tempvalminwmsghi)) ? 0 : lodash.meanBy(tempvalminwmsghi));
+                overalltempwmspoa.push(isNaN(lodash.meanBy(tempvalminwmspoa)) ? 0 : lodash.meanBy(tempvalminwmspoa));
+                overalltempwmswindspeed.push(isNaN(lodash.meanBy(tempvalminwmswindspeed)) ? 0 : lodash.meanBy(tempvalminwmswindspeed));
+                overalltempwmsrelativehumidity.push(isNaN(lodash.meanBy(tempvalminwmsrelativehumiduty)) ? 0 : (lodash.meanBy(tempvalminwmsrelativehumiduty)));
+                tempminwmsambienttemperature.push(isNaN(lodash.meanBy(tempambienttemp)) ? 0 : lodash.meanBy(tempambienttemp));
+                tempminwmsmoduletemperature.push(isNaN(lodash.meanBy(tempmoduletemp)) ? 0 : lodash.meanBy(tempmoduletemp));
+            }
+            let temppeekpowerdevices = lodash.filter(Object.values(e.devices), ((x) => x.devicemeta.devicetypeid === 15))
+            peekpower.push(lodash.sumBy((temppeekpowerdevices), ((x) => x.parameters.PQM_ACT_PWR)))
         });
         var page1data = [];
         var page2data = [];
         var page3data = [];
-        plantstarttime = new Date(tempdata[0]?.localstarttimestamp || new Date())
-        plantstoptime = new Date(tempdata[tempdata.length - 1]?.localstarttimestamp || new Date());
+        plantstarttime = new Date(tempdevicedata[0]?.localstarttimestamp || new Date())
+        plantstoptime = new Date(tempdevicedata[tempdevicedata.length - 1]?.localstarttimestamp || new Date());
         plantrunninghours = format(differenceInHours(plantstoptime, plantstarttime), 'HH:mm')
 
         let temppalntstarttime = {
@@ -324,21 +320,21 @@ try {
             value: plantstarttime,
             exportvalue: '-',
             importvalue: '-',
-            unit: '-'
+            unit: 'Datetime'
         };
         let temppalntstopttime = {
             devicename: `Plant stop time`,
             value: plantstoptime,
             exportvalue: '-',
             importvalue: '-',
-            unit: '-'
+            unit: 'Datetime'
         };
         let temppalntrunningttime = {
             devicename: `Plant running time`,
             value: plantrunninghours,
             exportvalue: '-',
             importvalue: '-',
-            unit: '-'
+            unit: 'Hrs'
         };
 
         page1data.push(temppalntstarttime);
@@ -369,6 +365,22 @@ try {
             };
             page1data.push(tempdata);
         });
+        let mfmtotalexport = {
+            devicename: `MFM Total Export`,
+            value: '-',
+            exportvalue: isNaN(lodash.sumBy(Object.values(mfmdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(mfmdevices), ((x) => x.minexportvalue))) ? 0 : (lodash.sumBy(Object.values(mfmdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(mfmdevices), ((x) => x.minexportvalue))),
+            importvalue: '-',
+            unit: 'kWh'
+        };
+        page1data.push(mfmtotalexport);
+        let mfmtotalimport = {
+            devicename: `MFM Total Import`,
+            value: '-',
+            exportvalue: '-',
+            importvalue: isNaN(lodash.sumBy(Object.values(mfmdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(mfmdevices), ((x) => x.minimportvalue))) ? 0 : (lodash.sumBy(Object.values(mfmdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(mfmdevices), ((x) => x.minimportvalue))),
+            unit: 'kWh'
+        };
+        page1data.push(mfmtotalimport);
         Object.values(checkmeterdevices).map((x) => {
             x.exportvalue = isNaN(x.maxexportvalue - x.minexportvalue) ? 0 : x.maxexportvalue - x.minexportvalue;
             x.importvalue = isNaN(x.maximportvalue - x.minimportvalue) ? 0 : x.maximportvalue - x.minimportvalue;
@@ -382,6 +394,22 @@ try {
             };
             page1data.push(tempdata);
         });
+        let checkmetertotalexport = {
+            devicename: `MCR Check meter Total Export`,
+            value: '-',
+            exportvalue: isNaN(lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.minexportvalue))) ? 0 : (lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.minexportvalue))),
+            importvalue: '-',
+            unit: 'kWh'
+        };
+        page1data.push(checkmetertotalexport);
+        let checkmetertotalimport = {
+            devicename: `MCR Check meter Total Import`,
+            value: '-',
+            exportvalue: '-',
+            importvalue: isNaN(lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.minimportvalue))) ? 0 : (lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(checkmeterdevices), ((x) => x.minimportvalue))),
+            unit: 'kWh'
+        };
+        page1data.push(checkmetertotalimport);
         Object.values(mainmeterdevices).map((x) => {
             x.exportvalue = isNaN(x.maxexportvalue - x.minexportvalue) ? 0 : x.maxexportvalue - x.minexportvalue;
             x.importvalue = isNaN(x.maximportvalue - x.minimportvalue) ? 0 : x.maximportvalue - x.minimportvalue;
@@ -394,6 +422,22 @@ try {
             };
             page1data.push(tempdata);
         });
+        let mainmetertotalexport = {
+            devicename: `MCR Main meter Total Export`,
+            value: '-',
+            exportvalue: isNaN(lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.minexportvalue))) ? 0 : (lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.minexportvalue))),
+            importvalue: '-',
+            unit: 'kWh'
+        };
+        page1data.push(mainmetertotalexport);
+        let mainmetertotalimport = {
+            devicename: `MCR Main meter Total Import`,
+            value: '-',
+            exportvalue: '-',
+            importvalue: isNaN(lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.minimportvalue))) ? 0 : (lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(mainmeterdevices), ((x) => x.minimportvalue))),
+            unit: 'kWh'
+        };
+        page1data.push(mainmetertotalimport);
         Object.values(pqmdevices).map((x) => {
             x.exportvalue = isNaN(x.maxexportvalue - x.minexportvalue) ? 0 : x.maxexportvalue - x.minexportvalue;
             x.importvalue = isNaN(x.maximportvalue - x.minimportvalue) ? 0 : x.maximportvalue - x.minimportvalue;
@@ -407,6 +451,23 @@ try {
             };
             page1data.push(tempdata);
         });
+
+        let pqmmetertotalexport = {
+            devicename: `PQM meter Total Export`,
+            value: '-',
+            exportvalue: isNaN(lodash.sumBy(Object.values(pqmdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(pqmdevices), ((x) => x.minexportvalue))) ? 0 : (lodash.sumBy(Object.values(pqmdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(pqmdevices), ((x) => x.minexportvalue))),
+            importvalue: '-',
+            unit: 'kWh'
+        };
+        page1data.push(pqmmetertotalexport);
+        let pqmmetertotalimport = {
+            devicename: `PQM meter Total Import`,
+            value: '-',
+            exportvalue: '-',
+            importvalue: isNaN(lodash.sumBy(Object.values(pqmdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(pqmdevices), ((x) => x.minimportvalue))) ? 0 : (lodash.sumBy(Object.values(pqmdevices), ((x) => x.maximportvalue)) - lodash.sumBy(Object.values(pqmdevices), ((x) => x.minimportvalue))),
+            unit: 'kWh'
+        };
+        page1data.push(pqmmetertotalimport);
         let tempwmsmoduletempdatavalues = lodash.sumBy(wmssurtemp) / wmssurtemp.length;
         let tempwmsmoduletempdatavaluelegend = listofparameters.find((f) => f.parametername == 'WMS_MDL_TEMP1');
         let tempambienttempvalue = lodash.sumBy(wmsambienttemp) / wmssurtemp.length;
@@ -417,7 +478,7 @@ try {
         let tempwmsghivalue = (lodash.sumBy(wmsghi)) / 60000;
         let tempwmsghivaluelegend = listofparameters.find((f) => f.parametername == 'WMS_GHI');
 
-        let peekpowervalue = lodash.sumBy(peekpower) > 50000 ? 50000 : lodash.sumBy(peekpower);
+        let peekpowervalue = isNaN((lodash.maxBy(peekpower) / 1000)) ? 0 : lodash.maxBy(peekpower) > 50000 ? 50000 : (lodash.maxBy(peekpower) / 1000);
 
         let temppeerpowerdata = {
             devicename: `Peek Power`,
@@ -462,6 +523,23 @@ try {
             unit: '%'
         };
 
+        let tempcufac = isNaN(lodash.sumBy(Object.values(pqmdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(pqmdevices), ((x) => x.minexportvalue))) ? 0 : (lodash.sumBy(Object.values(pqmdevices), ((x) => x.maxexportvalue)) - lodash.sumBy(Object.values(pqmdevices), ((x) => x.minexportvalue)));
+        let cufacvalue = {
+            devicename: `CUF(AC)`,
+            value: isNaN((tempcufac / (24 * 50000)) * 100) ? 0 : (tempcufac / (24 * 50000)) * 100,
+            exportvalue: '-',
+            importvalue: '-',
+            unit: '%'
+        };
+        let cufdcvalue = {
+            devicename: `CUF(DC)`,
+            value: isNaN((tempcufac / (24 * 66052.8)) * 100) ? 0 : (tempcufac / (24 * 66052.8)) * 100,
+            exportvalue: '-',
+            importvalue: '-',
+            unit: '%'
+        };
+
+
 
         page1data.push(tempmoduledata);
         page1data.push(wmstempambienttempdata);
@@ -469,41 +547,68 @@ try {
         page1data.push(temppoavalue);
         page1data.push(temppeerpowerdata);
         page1data.push(tempplantperformanceration);
+        page1data.push(cufacvalue);
+        page1data.push(cufdcvalue);
 
 
-        // Object.values(pqmdevices).map((x) => {
-        // x.exportvalue = isNaN(x.maxexportvalue - x.minexportvalue) ? 0 : x.maxexportvalue - x.minexportvalue;
-        // x.importvalue = isNaN(x.maximportvalue - x.minimportvalue) ? 0 : x.maximportvalue - x.minimportvalue;
+        overalltempwmspoa = lodash.filter(overalltempwmspoa, ((x) => x > 0));
+        overalltempwmsghi = lodash.filter(overalltempwmsghi, ((x) => x > 0))
+        overalltempwmswindspeed = lodash.filter(overalltempwmswindspeed, ((x) => x > 0))
+        overalltempwmsrelativehumidity = lodash.filter(overalltempwmsrelativehumidity, ((x) => x > 0))
+        tempminwmsambienttemperature = lodash.filter(tempminwmsambienttemperature, ((x) => x > 0))
 
         let tempwmspoavar = {
-            devicename: `WMS POA`,
-            minvalue: lodash.sumBy(tempminwmspoa),
-            maxvalue: lodash.sumBy(tempwmsmaxpoa),
-            average: isNaN(lodash.sumBy(overalltempwmspoa) / overalltempwmspoa.length) ? 0 : lodash.sumBy(overalltempwmspoa) / overalltempwmspoa.length
+            devicename: `POA`,
+            minvalue: lodash.minBy(overalltempwmspoa),
+            maxvalue: lodash.maxBy(overalltempwmspoa),
+            average: isNaN(lodash.meanBy(overalltempwmspoa)) ? 0 : lodash.meanBy(overalltempwmspoa),
+            unit: 'W/m²'
         };
         page3data.push(tempwmspoavar);
         let tempwmsghivar = {
-            devicename: `WMS GHI`,
-            minvalue: lodash.sumBy(tempminwmsghi),
-            maxvalue: lodash.sumBy(tempwmsmaxghi),
-            average: isNaN(lodash.sumBy(overalltempwmsghi) / overalltempwmsghi.length) ? 0 : lodash.sumBy(overalltempwmsghi) / overalltempwmsghi.length
+            devicename: `GHI`,
+            minvalue: lodash.minBy(overalltempwmsghi),
+            maxvalue: lodash.maxBy(overalltempwmsghi),
+            average: isNaN(lodash.meanBy(overalltempwmsghi)) ? 0 : lodash.meanBy(overalltempwmsghi),
+            unit: 'W/m²'
         };
         page3data.push(tempwmsghivar);
 
         let tempwmswindspeedvar = {
-            devicename: `WMS Wind Speed`,
-            minvalue: lodash.sumBy(tempminwmswindspeed),
-            maxvalue: lodash.sumBy(tempwmsmaxwindspeed),
-            average: isNaN(lodash.sumBy(overalltempwmswindspeed) / overalltempwmswindspeed.length) ? 0 : lodash.sumBy(overalltempwmswindspeed) / overalltempwmswindspeed.length
+            devicename: `Wind Speed`,
+            minvalue: lodash.minBy(overalltempwmswindspeed),
+            maxvalue: lodash.maxBy(overalltempwmswindspeed),
+            average: isNaN(lodash.meanBy(overalltempwmswindspeed)) ? 0 : lodash.meanBy(overalltempwmswindspeed),
+            unit: 'm/s'
+
         };
         page3data.push(tempwmswindspeedvar);
         let tempwmsrelativehumidity = {
-            devicename: `WMS Relative Humidity`,
-            minvalue: lodash.sumBy(tempminwmsrelativehumidity),
-            maxvalue: lodash.sumBy(tempwmsmaxrelativehumidity),
-            average: isNaN(lodash.sumBy(overalltempwmsrelativehumidity) / overalltempwmsrelativehumidity.length) ? 0 : lodash.sumBy(overalltempwmsrelativehumidity) / overalltempwmsrelativehumidity.length
+            devicename: `Relative Humidity`,
+            minvalue: lodash.minBy(overalltempwmsrelativehumidity),
+            maxvalue: lodash.maxBy(overalltempwmsrelativehumidity),
+            average: isNaN(lodash.meanBy(overalltempwmsrelativehumidity)) ? 0 : lodash.meanBy(overalltempwmsrelativehumidity),
+            unit: '%'
+
         };
         page3data.push(tempwmsrelativehumidity);
+        let tempwmsambienttemperaturevar = {
+            devicename: `Ambient temperature`,
+            minvalue: lodash.minBy(tempminwmsambienttemperature),
+            maxvalue: lodash.maxBy(tempminwmsambienttemperature),
+            average: isNaN(lodash.meanBy(tempminwmsambienttemperature)) ? 0 : lodash.meanBy(tempminwmsambienttemperature),
+            unit: '°C'
+        };
+        page3data.push(tempwmsambienttemperaturevar);
+        // tempminwmsmoduletemperature
+        let tempwmsmoduletemperaturevar = {
+            devicename: `Module temperature`,
+            minvalue: lodash.minBy(tempminwmsmoduletemperature),
+            maxvalue: lodash.maxBy(tempminwmsmoduletemperature),
+            average: isNaN(lodash.meanBy(tempminwmsmoduletemperature)) ? 0 : lodash.meanBy(tempminwmsmoduletemperature),
+            unit: '°C'
+        };
+        page3data.push(tempwmsmoduletemperaturevar);
         workbook.creator = "ArmaX Automation PVT. Ltd";
         workbook.lastModifiedBy = "ArmaX Automation PVT. Ltd";
         workbook.created = new Date();
@@ -543,6 +648,7 @@ try {
             { header: "Min value", key: "minvalue" },
             { header: "Max Value", key: "maxvalue" },
             { header: "Average", key: "average" },
+            { header: "Unit", key: "unit" },
         ];
         page3data.forEach((e, index) => {
             const rowIndex = index + 2;
@@ -566,7 +672,6 @@ try {
         });
     };
     app.get("/", (req, res) => {
-        // res.send('Hello World!')
         datafunction(req, res);
     });
 
