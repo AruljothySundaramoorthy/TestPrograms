@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@armax_cloud/allspark-data-models": "1.0.4-beta.125",
+    "axios": "^0.23.0",
     "cron-parser": "^3.5.0",
     "date-fns": "^2.23.0",
     "dates-generator": "^1.0.3",
