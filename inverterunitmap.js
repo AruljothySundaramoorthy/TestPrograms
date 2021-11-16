@@ -1,311 +1,354 @@
 const data = [
+
     {
-        "deviceparentid": "c3d48133-c9b6-4c04-ba23-17acbbe0ca32"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "e74ad561-28b7-41c8-8a81-8fd23172dcf6"
     },
+
+
     {
-        "deviceparentid": "c3d48133-c9b6-4c04-ba23-17acbbe0ca32"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "062cccea-11a2-4720-ab7f-9eaa45a18a10"
     },
+
+
     {
-        "deviceparentid": "add570b1-4f0b-42b3-992b-7036d3ab07e8"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "12cd26b0-18b3-4821-93c4-8014483b2eaf"
     },
+
+
     {
-        "deviceparentid": "add570b1-4f0b-42b3-992b-7036d3ab07e8"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "dc544959-525a-4326-9815-9e463f72eb6f"
     },
+
+
     {
-        "deviceparentid": "a39836d4-0534-42c1-b254-09ee1c1c3c3e"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "6093be76-c304-4da8-bbc9-024d275734a7"
     },
+
+
     {
-        "deviceparentid": "a39836d4-0534-42c1-b254-09ee1c1c3c3e"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "efa41359-f2d0-4b4c-872d-ff3b22dd77da"
     },
+
+
     {
-        "deviceparentid": "1377390d-d178-4651-89ea-f847dbaf8747"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "90c06181-d882-47d7-ab3c-d93fbaa122a9"
     },
+
+
     {
-        "deviceparentid": "1377390d-d178-4651-89ea-f847dbaf8747"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "acfcfcf6-e76c-4f13-9921-8d3b71921983"
     },
+
+
     {
-        "deviceparentid": "fc78cc5f-fc32-42db-9dac-159874b656dc"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "e3f2f93c-6c71-47c4-ba51-18997d1d7682"
     },
+
+
     {
-        "deviceparentid": "fc78cc5f-fc32-42db-9dac-159874b656dc"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "1b49b297-b5e3-4c03-9f92-5f40857f7149"
     },
+
+
     {
-        "deviceparentid": "1f36bf1d-b3a9-4e93-9db4-efcdf5be337a"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "cb591d73-537b-42d6-bfc0-b126238ccc49"
     },
+
+
     {
-        "deviceparentid": "1f36bf1d-b3a9-4e93-9db4-efcdf5be337a"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "bdbb12d9-9711-4bb8-a705-edd5a385ac6f"
     },
+
+
     {
-        "deviceparentid": "e726b609-ff33-4b7c-be38-ec8c3f593a60"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "0e3ffafa-1e52-49ed-acfc-6564e13d080e"
     },
+
+
     {
-        "deviceparentid": "e726b609-ff33-4b7c-be38-ec8c3f593a60"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "b84263ba-e027-4479-9b4e-90ca1364a914"
     },
+
+
     {
-        "deviceparentid": "b46d8b38-c6b9-4cf8-b786-d71fac2a006d"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "1bc216de-0b5d-4193-b583-f0ba6d0911e6"
     },
+
+
     {
-        "deviceparentid": "b46d8b38-c6b9-4cf8-b786-d71fac2a006d"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "0ce8e6a6-2fbb-4e4d-ae18-0469042b1574"
     },
+
+
     {
-        "deviceparentid": "e0906cc3-d812-4a02-a8c2-232263c7eadf"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "f4985ee0-3d5f-45ca-a3db-d5d72d584979"
     },
+
+
     {
-        "deviceparentid": "e0906cc3-d812-4a02-a8c2-232263c7eadf"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "d2e836c0-8ea0-4c2a-b0f6-57af363f8ae1"
     },
+
+
     {
-        "deviceparentid": "525860cc-33f4-4dc9-a198-9db12f12961f"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "9ceecb45-dc09-493f-a0e5-334f5692e1ac"
     },
+
+
     {
-        "deviceparentid": "525860cc-33f4-4dc9-a198-9db12f12961f"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "f5511155-8e2c-4183-8f66-ee628a569053"
     },
+
+
     {
-        "deviceparentid": "44636cfc-146b-4011-a0a0-529644c205c6"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "c0129000-7b73-466d-8643-57a7292bda3f"
     },
+
+
     {
-        "deviceparentid": "2767b9e4-1e3d-4a08-a495-b0fb5a49cb67"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "0c63c496-9f7c-4ba1-a2b2-75f1db4dc3cf"
     },
+
+
     {
-        "deviceparentid": "44636cfc-146b-4011-a0a0-529644c205c6"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "3aad010c-5461-499c-9750-c4c6aefd1d22"
     },
+
+
     {
-        "deviceparentid": "2767b9e4-1e3d-4a08-a495-b0fb5a49cb67"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "2e5167fa-d5fe-4bd9-a6a8-bec72548614c"
     },
+
+
     {
-        "deviceparentid": "4df001e1-db9c-449a-815a-39ccf4263b6a"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "0a4ec4c8-fbfb-4a55-80b8-c7d855f066df"
     },
+
+
     {
-        "deviceparentid": "4df001e1-db9c-449a-815a-39ccf4263b6a"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "9fb35fdc-5eb1-49b1-b925-32eca8e86e58"
     },
+
+
     {
-        "deviceparentid": "09e6875f-48db-4cfa-846e-726c1612f41f"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "aabcb494-f532-440e-b24c-9fdc3be370e4"
     },
+
+
     {
-        "deviceparentid": "09e6875f-48db-4cfa-846e-726c1612f41f"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "57a8ef29-c8f5-4391-8ea9-f00f1b527b3a"
     },
+
+
     {
-        "deviceparentid": "eb86818d-da56-4917-83c7-8270cbc1acb5"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "270e81c0-8e08-4872-870b-deaf52183c72"
     },
+
+
     {
-        "deviceparentid": "eb86818d-da56-4917-83c7-8270cbc1acb5"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "4402300c-5832-4541-b450-86916c792869"
     },
+
+
     {
-        "deviceparentid": "bbcd1a0e-e899-42dd-834d-e00682c6fd7c"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "66c70abb-753d-45d9-ab03-51168efc3f6e"
     },
+
+
     {
-        "deviceparentid": "bbcd1a0e-e899-42dd-834d-e00682c6fd7c"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "cedf30d8-c182-44e2-9561-a2a894b0a0a5"
     },
+
+
     {
-        "deviceparentid": "a04e69e1-c39b-43f5-8a3a-4d1ab88a2544"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "d4386b44-ef3d-4001-a955-301801c6f7a8"
     },
+
+
     {
-        "deviceparentid": "a04e69e1-c39b-43f5-8a3a-4d1ab88a2544"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "56353acc-42e3-44bd-94a8-e6e5d03f3ef9"
     },
+
+
     {
-        "deviceparentid": "2ce96926-d63c-46f4-8046-67d1b0ef5215"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "9aa2c6b6-e32c-4e3d-a492-9262fa2dffc4"
     },
+
+
     {
-        "deviceparentid": "2ce96926-d63c-46f4-8046-67d1b0ef5215"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "60ab087e-9a09-4817-a601-b0a2a1966705"
     },
+
+
     {
-        "deviceparentid": "d2718128-39ff-4121-afe8-18083c7bac99"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "e4dec38d-8555-4aeb-b99a-5f067efef80d"
     },
+
+
     {
-        "deviceparentid": "d2718128-39ff-4121-afe8-18083c7bac99"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "592e2125-5c98-44da-a2dc-9f131b341e80"
     },
+
+
     {
-        "deviceparentid": "87075010-2507-43e0-b71f-e2b384f77892"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "b179b96f-da9e-4a7d-b81d-1ebf3fb4867f"
     },
+
+
     {
-        "deviceparentid": "87075010-2507-43e0-b71f-e2b384f77892"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "a08a0a07-c9c1-4464-a2cb-ef2b21fe3c22"
     },
+
+
     {
-        "deviceparentid": "88a9ba0a-7815-44ad-a006-6587bd709999"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "60172fad-b9b0-455e-a49b-136ed14ac5ca"
     },
+
+
     {
-        "deviceparentid": "88a9ba0a-7815-44ad-a006-6587bd709999"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "0f5b5354-1ff5-4c99-8b49-893d4ca4b286"
     },
+
+
     {
-        "deviceparentid": "29572d0f-a84e-45fe-8830-b71c4137ca1c"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "46d60bb0-880c-4519-9761-20be977bb4d7"
     },
+
+
     {
-        "deviceparentid": "29572d0f-a84e-45fe-8830-b71c4137ca1c"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "24048c9f-fe57-42d6-9c62-5a2f1eed91c5"
     },
+
+
     {
-        "deviceparentid": "04417668-ea66-4b3c-9238-f9cf6d1b4bdf"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "467c8394-4324-4c22-bb3a-07501f0b07e4"
     },
+
+
     {
-        "deviceparentid": "04417668-ea66-4b3c-9238-f9cf6d1b4bdf"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "df210da5-2c23-4c07-95ad-545c14514f92"
     },
+
+
     {
-        "deviceparentid": "fb280a19-c807-4a64-8931-d2ff09bd2c16"
+        "devicename": "U1",
+        "devicedisplayname": "Inverter1 Module1",
+        "deviceid": "cf8c0851-49d2-4fae-a7b0-65ffe02bf3b1"
     },
+
+
     {
-        "deviceparentid": "fb280a19-c807-4a64-8931-d2ff09bd2c16"
+        "devicename": "U2",
+        "devicedisplayname": "Inverter1 Module2",
+        "deviceid": "297e73b5-02f8-4866-8bc4-9f7cb32a1547"
     },
+
+
     {
-        "deviceparentid": "e845bb28-ac25-457d-af27-a2b1ea3157d6"
+        "devicename": "U3",
+        "devicedisplayname": "Inverter2 Module1",
+        "deviceid": "7a9b952b-ea8a-42fe-9d6b-03fe3f30b3c9"
     },
+
+
     {
-        "deviceparentid": "e845bb28-ac25-457d-af27-a2b1ea3157d6"
-    },
-    {
-        "deviceparentid": "b4d51a51-c8ea-4be9-8649-affd6522d5a6"
-    },
-    {
-        "deviceparentid": "b4d51a51-c8ea-4be9-8649-affd6522d5a6"
-    },
-    {
-        "deviceparentid": "fc95e42c-ffa4-4847-8121-d6fcf13ae5a6"
-    },
-    {
-        "deviceparentid": "fc95e42c-ffa4-4847-8121-d6fcf13ae5a6"
-    },
-    {
-        "deviceparentid": "8217b84e-d5e9-4494-9686-81d504567bf2"
-    },
-    {
-        "deviceparentid": "d3de159e-ef04-4c16-8287-793599e5c437"
-    },
-    {
-        "deviceparentid": "8217b84e-d5e9-4494-9686-81d504567bf2"
-    },
-    {
-        "deviceparentid": "d3de159e-ef04-4c16-8287-793599e5c437"
-    },
-    {
-        "deviceparentid": "b4123ee1-881d-45c4-8f0c-5bc01e975a05"
-    },
-    {
-        "deviceparentid": "b4123ee1-881d-45c4-8f0c-5bc01e975a05"
-    },
-    {
-        "deviceparentid": "cf745a76-e8e6-4bb8-bca6-b968da2a5533"
-    },
-    {
-        "deviceparentid": "cf745a76-e8e6-4bb8-bca6-b968da2a5533"
-    },
-    {
-        "deviceparentid": "d4ef753f-87a3-44ca-a2c7-8ee49e27949f"
-    },
-    {
-        "deviceparentid": "d4ef753f-87a3-44ca-a2c7-8ee49e27949f"
-    },
-    {
-        "deviceparentid": "b68b39a7-8f79-43e0-841f-17cdefac0e35"
-    },
-    {
-        "deviceparentid": "b68b39a7-8f79-43e0-841f-17cdefac0e35"
-    },
-    {
-        "deviceparentid": "3dae9d96-1b6e-4843-b430-2475326a17a5"
-    },
-    {
-        "deviceparentid": "ff3419d3-f1cf-4050-80d9-9d56fa8abeb3"
-    },
-    {
-        "deviceparentid": "3dae9d96-1b6e-4843-b430-2475326a17a5"
-    },
-    {
-        "deviceparentid": "ff3419d3-f1cf-4050-80d9-9d56fa8abeb3"
-    },
-    {
-        "deviceparentid": "bd78c434-aca3-4193-b990-a1e179a0d0d3"
-    },
-    {
-        "deviceparentid": "bd78c434-aca3-4193-b990-a1e179a0d0d3"
-    },
-    {
-        "deviceparentid": "ca2081bd-6f34-4af7-adf9-ffaad895ba32"
-    },
-    {
-        "deviceparentid": "ca2081bd-6f34-4af7-adf9-ffaad895ba32"
-    },
-    {
-        "deviceparentid": "3ff9a5d9-64d3-42f0-a5fb-54a94847f8d6"
-    },
-    {
-        "deviceparentid": "3ff9a5d9-64d3-42f0-a5fb-54a94847f8d6"
-    },
-    {
-        "deviceparentid": "dd03ad6b-2152-4dfe-86b5-9a51e42726be"
-    },
-    {
-        "deviceparentid": "dd03ad6b-2152-4dfe-86b5-9a51e42726be"
-    },
-    {
-        "deviceparentid": "1796f4f3-262c-46fc-8195-c33a78bb63b7"
-    },
-    {
-        "deviceparentid": "1796f4f3-262c-46fc-8195-c33a78bb63b7"
-    },
-    {
-        "deviceparentid": "0bef8ba2-ac7c-42d8-8c97-d40846e069f5"
-    },
-    {
-        "deviceparentid": "0bef8ba2-ac7c-42d8-8c97-d40846e069f5"
-    },
-    {
-        "deviceparentid": "ce9d1f10-938e-4227-9462-bcbdd2bc9266"
-    },
-    {
-        "deviceparentid": "ce9d1f10-938e-4227-9462-bcbdd2bc9266"
-    },
-    {
-        "deviceparentid": "ca1569db-3697-415c-8539-02167a9f26d5"
-    },
-    {
-        "deviceparentid": "ca1569db-3697-415c-8539-02167a9f26d5"
-    },
-    {
-        "deviceparentid": "abf76644-f70f-475f-b1a0-91a939e86a98"
-    },
-    {
-        "deviceparentid": "5a942b96-4242-4096-a8f1-c9eeeb11e6c7"
-    },
-    {
-        "deviceparentid": "5a942b96-4242-4096-a8f1-c9eeeb11e6c7"
-    },
-    {
-        "deviceparentid": "abf76644-f70f-475f-b1a0-91a939e86a98"
-    },
-    {
-        "deviceparentid": "0497642f-35f5-47ac-ac56-cdfbdcf31e1e"
-    },
-    {
-        "deviceparentid": "0497642f-35f5-47ac-ac56-cdfbdcf31e1e"
-    },
-    {
-        "deviceparentid": "90494c0c-c31a-4a6d-a922-10b8328bc6ed"
-    },
-    {
-        "deviceparentid": "90494c0c-c31a-4a6d-a922-10b8328bc6ed"
-    },
-    {
-        "deviceparentid": "223a366a-0b8d-45c1-b03d-535ea3394b5f"
-    },
-    {
-        "deviceparentid": "223a366a-0b8d-45c1-b03d-535ea3394b5f"
-    },
-    {
-        "deviceparentid": "2c0d0271-a584-4d8e-add5-17ef4d10a16a"
-    },
-    {
-        "deviceparentid": "2c0d0271-a584-4d8e-add5-17ef4d10a16a"
-    },
-    {
-        "deviceparentid": "9084ed2b-62a4-46b7-bb3b-3e45f34c3c90"
-    },
-    {
-        "deviceparentid": "9084ed2b-62a4-46b7-bb3b-3e45f34c3c90"
-    },
-    {
-        "deviceparentid": "7f713a0f-ea35-4e09-a444-caed00e34ee9"
-    },
-    {
-        "deviceparentid": "7f713a0f-ea35-4e09-a444-caed00e34ee9"
+        "devicename": "U4",
+        "devicedisplayname": "Inverter2 Module2",
+        "deviceid": "2afac1e0-6b73-42e3-8eb0-2fbe3671905a"
     }
-];
-const d = data.map((x) => x.deviceparentid)
+]
+const d = data.map((x) => x.devicename)
 
 console.log(data);
