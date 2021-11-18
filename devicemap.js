@@ -7,31 +7,46 @@ const temp = {
     referencepr: 74.5,
     devices: [
         {
-            inverterunitname: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
+            inverterunitid: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
             dccapacityfactorfactor: 4232,
             blockname: "",
             invertername: "",
             inverterunitname: ""
         },
         {
-            inverterunitname: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
+            inverterunitid: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
             dccapacityfactor: 4232,
+            blockname: "",
+            invertername: "",
+            inverterunitname: ""
         },
         {
-            inverterunitname: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
+            inverterunitid: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
             dccapacityfactor: 4232,
+            blockname: "",
+            invertername: "",
+            inverterunitname: ""
         },
         {
-            inverterunitname: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
+            inverterunitid: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
             dccapacityfactor: 4232,
+            blockname: "",
+            invertername: "",
+            inverterunitname: ""
         },
         {
-            inverterunitname: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
+            inverterunitid: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
             dccapacityfactor: 4232,
+            blockname: "",
+            invertername: "",
+            inverterunitname: ""
         },
         {
-            inverterunitname: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
+            inverterunitid: "028d9acf-0828-4a6c-9e64-61ce2efbdc0f",
             dccapacityfactor: 4232,
+            blockname: "",
+            invertername: "",
+            inverterunitname: ""
         },
     ],
 };
