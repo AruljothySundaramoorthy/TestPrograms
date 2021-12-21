@@ -10,8 +10,8 @@ spreadandassignoperation = () => {
 
 
         let dataval = { name: element.name, age: element.age, address: element.address }
-        // Object.assign(newobject, dataval);
-        newobject = { ...newobject, ...dataval }
+        Object.assign(newobject, dataval);
+        // newobject = { ...newobject, ...dataval }
 
     })
 };
