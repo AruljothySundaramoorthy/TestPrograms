@@ -3,6 +3,7 @@ try {
     const express = require("express");
     const app = express();
     const port = 3000;
+    const dbengine = require("./dbengine");
     const { processor } = require('./excelparser');
 
     const datafunction = () => {
@@ -11,6 +12,7 @@ try {
     app.get("/", (req, res) => {
         datafunction(req, res);
     });
+    dbengine.connect();
     app.post("/", async (req, res) => {
         // datafunction(req, res);
         const form = formidable({ multiples: false });

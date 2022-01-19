@@ -1,6 +1,9 @@
 const { splitfunction, generaterandomnumber } = require("./util");
-
+const { PROTOCOL, DataType, ModBusFunctionCode, Priority, DeviceType } = require('@armax_cloud/radiatics-models/enums/index')
+// const {} = require('@armax_cloud/yoko-models')
 const { v4: uuidv4 } = require("uuid");
+
+const { } = require('@armax_cloud/yoko-models')
 
 const enumdata = {
     DEVICE_PROTOCOL: {
@@ -101,9 +104,10 @@ const enumdata = {
 const devicesanitize = (data, blocksmap) => {
     let devicedata = {
         deviceport: data.deviceport ?? null,
+        deviceip: data.deviceip ?? null,
         devicedatafetchcron:
             enumdata.DEVICE_CRON[splitfunction(data.devicedatafetchcron, 0, ":")],
-        deviceip: data.deviceip ?? null,
+
         devicedisplayname: data.devicename ?? "",
         devicecode: generaterandomnumber(),
         devicesortorder: data.devicesortorder,

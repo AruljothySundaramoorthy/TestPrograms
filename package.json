@@ -11,8 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@armax_cloud/allspark-data-models": "1.0.4-beta.199",
-    "@armax_cloud/radiatics-models": "^1.0.13",
-    "axios": "^0.24.0",
+    "@armax_cloud/radiatics-models": "^1.0.0-beta.12",
+    "@armax_cloud/yoko-models": "^1.0.0-beta.12",
+    "axios": "^0.25.0",
     "bublee": "^1.0.0",
     "cron-parser": "^4.2.1",
     "date-fns": "^2.28.0",
