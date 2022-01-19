@@ -1,9 +1,17 @@
 const { splitfunction, generaterandomnumber } = require("./util");
-const { PROTOCOL, DataType, ModBusFunctionCode, Priority, DeviceType } = require('@armax_cloud/radiatics-models/enums/index')
-// const {} = require('@armax_cloud/yoko-models')
+const {
+    PROTOCOL,
+    DataType,
+    ModBusFunctionCode,
+    Priority,
+    DeviceType,
+    OPCUAMessageSecurityMode,
+    OPCUASecurityPolicy,
+} = require("@armax_cloud/radiatics-models/enums/index");
+
 const { v4: uuidv4 } = require("uuid");
 
-const { } = require('@armax_cloud/yoko-models')
+const { } = require("@armax_cloud/yoko-models");
 
 const enumdata = {
     DEVICE_PROTOCOL: {
@@ -114,9 +122,8 @@ const devicesanitize = (data, blocksmap) => {
         deviceblockid: blocksmap[data.deviceblockname].blockid,
 
         devicename: data.devicename,
-        deviceprotocol: Number(
-            enumdata.DEVICE_PROTOCOL[splitfunction(data.deviceprotocol, 0, ":")]
-        ),
+        deviceprotocol: PROTOCOL[splitfunction(data.deviceprotocol, 0, ":")],
+
         devicemake: data.devicemake,
         devicemodel: data.devicemodel,
         devicetypeid: data.devicetypeid ?? 0,
@@ -141,13 +148,15 @@ const devicesanitize = (data, blocksmap) => {
                 endpoint: data["devicemeta.opcua.endpoint"],
                 password: data["devicemeta.opcua.password"],
                 securitymode:
-                    enumdata.OPCUA_SECURITY_MODE[
+                    OPCUAMessageSecurityMode[
                     splitfunction(data["devicemeta.opcua.securitymode"], 0, ":")
                     ],
+
                 securitypolicy:
-                    enumdata.OPCUA_SECURITY_POLICY[
+                    OPCUASecurityPolicy[
                     splitfunction(data["devicemeta.opcua.securitypolicy"], 0, ":")
                     ],
+
                 username: data["devicemeta.opcua.username"],
             };
             devicedata.devicemeta = { ...devicedata.devicemeta, opcua };
