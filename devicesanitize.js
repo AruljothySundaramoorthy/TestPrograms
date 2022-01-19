@@ -1,18 +1,7 @@
-
-
-const { splitfunction, generaterandomnumber } = require('./util');
+const { splitfunction, generaterandomnumber } = require("./util");
 
 const { v4: uuidv4 } = require("uuid");
-// const splitfunction = (splitvalue, position, significance) => {
-//     return splitvalue.split(significance)[position] ? splitvalue.split(significance)[position] : '';
 
-// }
-
-// const generaterandomnumber = () => {
-//     const min = 1000000;
-//     const max = 99999999;
-//     return random.int(min, max);
-// }
 const enumdata = {
     DEVICE_PROTOCOL: {
         MODBUS: "1",
@@ -69,54 +58,99 @@ const enumdata = {
         Sign: "2",
         SignAndEncrypt: "3",
     },
-}
+    DEVICETYPE: {
+        PLC: "1",
+        PPC: "2",
+        INVERTER: "3",
+        INVERTERUNIT: "4",
+        SMB: "5",
+        SCB: "6",
+        WMS: "7",
+        SMS: "8",
+        UPS: "9",
+        ANNUNCIATOR: "10",
+        RELAY: "11",
+        AUXMETER: "12",
+        NCU: "13",
+        SPC: "14",
+        PQM: "15",
+        PROMETER: "16",
+        SWITCH: "17",
+        PC: "18",
+        BATTERYCHARGER: "19",
+        SMARTLOGGER: "20",
+        MAINMETER: "21",
+        CHECKMETER: "22",
+        GPS: "23",
+        FAS: "24",
+        METER: "25",
+        TVM: "26",
+        VCB: "27",
+        TRANSFORMER: "28",
+        LTPANEL: "29",
+        PLCPANEL: "30",
+        CCTV: "31",
+        LBS: "32",
+        RTCC: "33",
+        PRINTER: "34",
+        FIREWALL: "35",
+        RTU: "36",
+        SAS: "37",
+    },
+};
 const devicesanitize = (data, blocksmap) => {
     let devicedata = {
-        deviceid: uuidv4(),
-        deviceport: (data.deviceport ?? 999),
-        devicefetchcron: enumdata.DEVICE_CRON[splitfunction(data.devicedatafetchcron, 0, ':')],
-        deviceip: (data.deviceip ?? '0.0.0.0'),
-        devicedisplayname: (data.devicename ?? ''), //TODO: Need to add on excel
+        deviceport: data.deviceport ?? null,
+        devicedatafetchcron:
+            enumdata.DEVICE_CRON[splitfunction(data.devicedatafetchcron, 0, ":")],
+        deviceip: data.deviceip ?? null,
+        devicedisplayname: data.devicename ?? "",
         devicecode: generaterandomnumber(),
         devicesortorder: data.devicesortorder,
         deviceblockid: blocksmap[data.deviceblockname].blockid,
-        // deviceparentid: '',//TODO Need to add in excel
-        // deviceblockname:data.deviceblockname,
+
         devicename: data.devicename,
-        deviceprotocol: enumdata.DEVICE_PROTOCOL[splitfunction(data.deviceprotocol, 0, ':')],
+        deviceprotocol: Number(
+            enumdata.DEVICE_PROTOCOL[splitfunction(data.deviceprotocol, 0, ":")]
+        ),
         devicemake: data.devicemake,
         devicemodel: data.devicemodel,
         devicetypeid: data.devicetypeid ?? 0,
-        devicevirtual: data.devicevirtual ? data?.devicevirtual : false,//TODO need to add this column in excel
-        devicevirtualfuncion: {},
-        devicestatus: {
-            communicationalarmenabled: (data.devicestatus?.communicationalarmenabled ?? false),
-            communicationeventenabled: (data.devicestatus?.communicationeventenabled ?? false),
-            disable: (data.devicestatus?.disable ?? false),
-            hidden: (data.devicestatus?.hidden ?? false)
-        },
-        devicemeta: {}
+        devicevirtual: data.devicevirtual ? data?.devicevirtual : false,
 
+        devicestatus: {
+            communicationalarmenabled:
+                data.devicestatus?.communicationalarmenabled ?? false,
+            communicationeventenabled:
+                data.devicestatus?.communicationeventenabled ?? false,
+            disable: data.devicestatus?.disable ?? false,
+            hidden: data.devicestatus?.hidden ?? false,
+        },
+        devicemeta: {},
     };
 
     switch (devicedata.deviceprotocol) {
-        case enumdata?.DEVICE_PROTOCOL?.OPCUA:
+        case Number(enumdata?.DEVICE_PROTOCOL?.OPCUA):
             delete devicedata.deviceport;
             delete devicedata.deviceip;
             const opcua = {
-                endpoint: data['devicemeta.opcua.endpoint'],
-                password: data['devicemeta.opcua.password'],
-                securitymode: enumdata.OPCUA_SECURITY_MODE[splitfunction(data['devicemeta.opcua.securitymode'], 0, ':')],
-                securitypolicy: enumdata.OPCUA_SECURITY_POLICY[splitfunction(data['devicemeta.opcua.securitypolicy'], 0, ':')],
-                username: data['devicemeta.opcua.username'],
-
-            }
+                endpoint: data["devicemeta.opcua.endpoint"],
+                password: data["devicemeta.opcua.password"],
+                securitymode:
+                    enumdata.OPCUA_SECURITY_MODE[
+                    splitfunction(data["devicemeta.opcua.securitymode"], 0, ":")
+                    ],
+                securitypolicy:
+                    enumdata.OPCUA_SECURITY_POLICY[
+                    splitfunction(data["devicemeta.opcua.securitypolicy"], 0, ":")
+                    ],
+                username: data["devicemeta.opcua.username"],
+            };
             devicedata.devicemeta = { ...devicedata.devicemeta, opcua };
 
             break;
     }
 
-
     return devicedata;
-}
-module.exports = { devicesanitize }
+};
+module.exports = { devicesanitize };

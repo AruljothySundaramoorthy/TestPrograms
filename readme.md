@@ -39,3 +39,9 @@ loadtest http://localhost:3000/ -n 1000 -c 100
 [Mon Jul 26 2021 10:17:19 GMT+0530 (India Standard Time)] INFO  100%      679 ms (longest request)
 [Mon Jul 26 2021 10:17:19 GMT+0530 (India Standard Time)] INFO
 [Mon Jul 26 2021 10:17:19 GMT+0530 (India Standard Time)] INFO    -1:   1 errors
+
+
+
+
+## Promise map (Use async await inside map,forloops)
+https://dev.to/nyagarcia/array-map-async-await-2cif
