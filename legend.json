@@ -1,26 +1,14 @@
 [
     {
-        "color": "#ff9933",
-        "label": "< -5%"
+        "color": "0 * * ? * *",
+        "label": "1 minute"
     },
     {
-        "color": "#ffd966",
-        "label": "-2 to -5%"
+        "color": "0 */2 * ? * *",
+        "label": "2 minutes"
     },
     {
-        "color": "#70AD47",
-        "label": "> -2%"
-    },
-    {
-        "color": "#7F7F7F",
-        "label": "Low Radiation"
-    },
-    {
-        "color": "#000000",
-        "label": "No Recent Communication"
-    },
-    {
-        "color": "#FFFFFF",
-        "label": "Insufficient Data For PR"
+        "color": "0 */5 * ? * *",
+        "label": "5 minutes"
     }
 ]

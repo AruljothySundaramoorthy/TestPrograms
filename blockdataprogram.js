@@ -1,6 +1,9 @@
 const { data } = require("./datablock1");
 const ExcelJS = require('exceljs');
 const lodash = require("lodash");
+
+
+console.log(lodash.meanBy([]))
 const workbook = new ExcelJS.Workbook();
 var tempdata = {};
 let firstdata = data[0].devices;
