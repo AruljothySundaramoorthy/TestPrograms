@@ -5,54 +5,42 @@ const { devicesanitize } = require("./devicesanitize");
 const mongobusiness = require("./mongobusiness");
 const deviceModelValidator = require("./joi");
 
-
 // try {
-
-
 
 const processor = async (filedata) => {
     // const file = XLSX.readFile("./CMS_MAPPING.xlsx");
-    const workbook = XLSX.readFile(filedata);
-    let data = [];
+    try {
+        const workbook = XLSX.readFile(filedata);
+        let data = [];
 
-    let blocksmap = {};
-    let blocks;
-    let devices = [];
+        let tempUnitenum = {};
+        let tempUnitenum2 = {};
+        let unitEnum = XLSX.utils
+            .sheet_to_json(workbook.Sheets["Units"])
+            .map((x) => {
+                Object.assign(tempUnitenum2, {
+                    [x.Key]: x.Key,
+                });
+                Object.assign(tempUnitenum, {
+                    [`${x.Key}`]: [],
+                });
+                return {
+                    [x.Key]: x.Key
+                };
+            });
+        console.log(unitEnum);
 
-    // blocks = XLSX.utils
-    //     .sheet_to_json(workbook.Sheets["blocks"])
-    //     .map((x) => (x = { ...x }));
+        XLSX.utils.sheet_to_json(workbook.Sheets["Unitenums"]).map((x) => {
+            tempUnitenum[x.group].push(x);
+            console.log(x);
+        });
+        return unitEnum;
+    } catch (e) {
+        console.log(e);
+    }
 
-    // blocks.map((x) => Object.assign(blocksmap, { [x.blockname]: x }));
-
-    // const savedata = await mongobusiness.saveblockdata(blocks);
-    // console.log(savedata);
-    let blockinfo = await mongobusiness.getblockinfo();
-    blockinfo = blockinfo.map((blockdata) => {
-        return { ...blockdata, ...{ _id: blockdata._id.toString() } }
-    })
-    blockinfo.map((x) => Object.assign(blocksmap, { [x.blockname]: x }));
-    // Device data process flow
-
-    const processdevicedata = (data) => {
-        const promisemap = data.map((devicedata) => {
-            const devicedataval = devicesanitize(devicedata, blocksmap);
-            return deviceModelValidator(devicedataval);
-
-        })
-        return Promise.all(
-            promisemap
-        )
-    };
-
-    devices = await processdevicedata(
-        XLSX.utils.sheet_to_json(workbook.Sheets["devices"])
-    );
-
-    console.log(filedata);
 };
 
 // processor();
 
-
-module.exports = { processor }
+module.exports = { processor };
