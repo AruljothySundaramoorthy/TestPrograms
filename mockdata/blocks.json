@@ -1,0 +1,337 @@
+[{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 1,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS1",
+  "blockdisplayname": "BL1",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "b15db903-eb8c-4e09-9eda-11ce9faa48ec"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 2,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS2",
+  "blockdisplayname": "BL2",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "b7e8a2e1-91bf-4bb3-8e3a-a2200fbfeb78"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 3,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS3",
+  "blockdisplayname": "BL3",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "7b115818-cb2b-43e0-a4dc-149493e1439b"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 4,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS4",
+  "blockdisplayname": "BL4",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "a0aef23c-a06f-48dc-aa9c-a8f593b489b7"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 5,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS5",
+  "blockdisplayname": "BL5",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "87e0e9aa-79ea-4602-817f-0cb3412917e6"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 6,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS6",
+  "blockdisplayname": "BL6",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "c559d7d2-d2fa-400e-82e4-125f5b2d9a64"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 7,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS7",
+  "blockdisplayname": "BL7",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "30fad658-9b8f-4941-8e78-dbeee109bde7"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 8,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS8",
+  "blockdisplayname": "BL8",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "a78d5ea4-631d-47a4-9770-6e893fc199e2"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 9,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS9",
+  "blockdisplayname": "BL9",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "171ca306-3c8b-4e7e-8740-80b0f2ee5249"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 10,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS10",
+  "blockdisplayname": "BL10",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "11d088d2-41b4-4032-b9f1-c6f1d32c2841"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 11,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS11",
+  "blockdisplayname": "BL11",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "d8f8ed57-e77c-4349-b733-98dea345755e"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 12,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS12",
+  "blockdisplayname": "BL12",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "ff616c74-9ef4-45eb-be22-95d5142bbf6d"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 13,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS15",
+  "blockdisplayname": "BL15",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "85d7895d-4e63-4955-b99d-b8c4ee16ff30"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 14,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS19",
+  "blockdisplayname": "BL19",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "985baf39-bc37-43a5-a502-8c2291effa7a"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 15,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS20",
+  "blockdisplayname": "BL20",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "00f60e2c-c87c-472d-a289-04f5765bcf75"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 16,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS22",
+  "blockdisplayname": "BL22",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "65f57457-75af-47ae-93ee-5c398de342b0"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 17,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS23",
+  "blockdisplayname": "BL23",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "a70f3f72-2bea-4d6d-939c-35f44cde39f1"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 18,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS24",
+  "blockdisplayname": "BL24",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "f4b957df-3688-4067-b9e2-bf01a6130bb7"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 19,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS25",
+  "blockdisplayname": "BL25",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "46523b60-17aa-413d-a3a2-737f4be7da42"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 20,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS34",
+  "blockdisplayname": "BL34",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "56b14092-08df-4106-b02d-51323e221498"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 21,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS35",
+  "blockdisplayname": "BL35",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "99923145-d5fb-402d-bf7f-89cd127b2cfc"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 22,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS36",
+  "blockdisplayname": "BL36",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "d6b45d3e-5817-4ba9-a07e-009b0c0375cb"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 23,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS38",
+  "blockdisplayname": "BL38",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "e6fd7d02-bdc4-4a59-9aad-454f4302bee6"
+},{
+  "blockip": [
+    "172.16.1.151"
+  ],
+  "blocksortorder": 24,
+  "menudisplay": true,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.931Z"
+  },
+  "blockname": "IS40",
+  "blockdisplayname": "BL40",
+  "blockdisplaylocale": [],
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "blockid": "dfef372f-96cf-485c-baf7-2a26e6036f30"
+}]

@@ -1,0 +1,88 @@
+[{
+  "operationiecmeta": {
+    "operationieclogicalname": null
+  },
+  "operationmodbusfunctioncode": 3,
+  "operationparameters": [
+    "45265e04-0cac-4bf9-a254-f6c59c4dba6f",
+    "48c6b0ee-c265-44a9-962c-7022a38896b1",
+    "c361d970-af79-4f0b-9abc-1722d77171a2",
+    "9e6feb81-ef46-4d81-9fa9-5004d87055ec",
+    "1b7287f9-0288-4a5f-8da7-f1e82ee18dd0",
+    "dce221e1-bbb1-451a-b24e-2f17230d7845",
+    "23e2e949-c858-4794-bb13-4cc673c5cbbd",
+    "6e1556b4-9f22-4f7e-a72a-175bd04652e0",
+    "f2cbb9e0-b3a5-4441-8a0c-269cd951f3d4",
+    "2ad7eb99-2ee6-4398-a642-cbbe516e9e29",
+    "535b6158-1bfd-4e25-87f3-a7ccd818405c",
+    "05feed6d-4f26-4094-bb32-eab764eb9d35",
+    "d059d3d1-052d-4c57-853c-9733ce7d70fe",
+    "d6902ea7-9cf3-44a2-889b-d61f25221ee3",
+    "636b71bf-ebe4-43d2-8fe3-b54ad98d510a",
+    "b3efcf0c-4055-4fe7-8889-493165f14003"
+  ],
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.978Z"
+  },
+  "operationname": "BLK_MCU1_GRP1",
+  "operationtype": 1,
+  "operationprotocol": 1,
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "operationid": "e054835b-62f3-45e2-8047-68cae0966d6f"
+},{
+  "operationiecmeta": {
+    "operationieclogicalname": null
+  },
+  "operationmodbusfunctioncode": 4,
+  "operationparameters": [
+    "041d997c-23be-4555-893e-feabf639fd61"
+  ],
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.978Z"
+  },
+  "operationname": "BLK_MCU1_CMD",
+  "operationtype": 2,
+  "operationprotocol": 1,
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "operationid": "6f2b1ea1-a8c6-4168-a82c-62978bd6838a"
+},{
+  "operationiecmeta": {
+    "operationieclogicalname": null
+  },
+  "operationmodbusfunctioncode": 3,
+  "operationparameters": [
+    "bde92ce1-10ff-483d-8b95-a3edd13278f2",
+    "c2167424-b75e-4376-add5-cd7c981c205d",
+    "33d3f729-9f09-474a-bba1-b957553ecfa7",
+    "0fd1b010-64b3-4d9b-b81e-9235a9e4066b",
+    "2807ab3c-8b34-42fd-ba31-4bdb57eb2f3d",
+    "105d727a-30ba-4d56-ab1d-c56f0635cced",
+    "c89f6af6-42b3-40e6-98e8-68b76359e2e9"
+  ],
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.978Z"
+  },
+  "operationname": "BLK_CB1_GRP1",
+  "operationtype": 1,
+  "operationprotocol": 1,
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "operationid": "bf8f93c3-a5b4-404e-92a8-b14c0ae2165f"
+},{
+  "operationiecmeta": {
+    "operationieclogicalname": null
+  },
+  "operationmodbusfunctioncode": 3,
+  "operationparameters": [
+    "d3f91d3e-15a5-4b8b-ba71-696bab04654c",
+    "c8d7979e-3da5-490e-8ad5-4f78cb447b14",
+    "58bb92d1-42f1-48e0-ba97-1e7566d72fc9"
+  ],
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.978Z"
+  },
+  "operationname": "BLK_CB1_GRP2",
+  "operationtype": 1,
+  "operationprotocol": 1,
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "operationid": "f69b8645-09f6-4fed-9c33-b46d8f4618a9"
+}]

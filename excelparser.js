@@ -13,6 +13,8 @@ const processor = async (filedata) => {
         const workbook = XLSX.readFile(filedata);
         let data = [];
 
+        let unitEnumdata = XLSX.utils
+            .sheet_to_json(workbook.Sheets["Units"]);
         let tempUnitenum = {};
         let tempUnitenum2 = {};
         let unitEnum = XLSX.utils

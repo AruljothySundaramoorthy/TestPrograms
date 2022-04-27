@@ -1,0 +1,1070 @@
+[{
+  "parameterunit": "-",
+  "parametersortorder": 1,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "d274e56f-8dce-4490-ba6f-fd1306697dd0"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_COMM_BOX_ID",
+  "parameterdisplayname": "MCU Communication Box ID",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Communication Box ID"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 162,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "45265e04-0cac-4bf9-a254-f6c59c4dba6f"
+},{
+  "parameterunit": "m/s",
+  "parametersortorder": 11,
+  "parameterminvalue": 0,
+  "parametermaxvalue": 50,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "7c0175a4-cdaf-44ca-9aaa-14a7c0a37c01"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_WIND_SPEED1",
+  "parameterdisplayname": "MCU Wind speed 1",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Wind speed 1"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 191,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "2ad7eb99-2ee6-4398-a642-cbbe516e9e29"
+},{
+  "parameterunit": "°(deg)",
+  "parametersortorder": 12,
+  "parameterminvalue": 0,
+  "parametermaxvalue": 360,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "18ac9003-fb80-45a3-becf-b11accef99e0"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_WIND",
+  "parameterdisplayname": "MCU Wind",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Wind "
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 192,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "535b6158-1bfd-4e25-87f3-a7ccd818405c"
+},{
+  "parameterunit": "°(deg)",
+  "parametersortorder": 13,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "b192c4c9-e88b-40a5-b3de-f5d8ceb00334"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_LONG",
+  "parameterdisplayname": "MCU Longitiude",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Longitiude"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 195,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "05feed6d-4f26-4094-bb32-eab764eb9d35"
+},{
+  "parameterunit": "°(deg)",
+  "parametersortorder": 14,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "1dd24b26-6079-452d-9486-d99d6b9cfccc"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_LATI",
+  "parameterdisplayname": "MCU Latitude",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Latitude"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 196,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "d059d3d1-052d-4c57-853c-9733ce7d70fe"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 15,
+  "parameterminvalue": -120,
+  "parametermaxvalue": 120,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "5f95d828-9987-457d-a781-37a0ef67a94d"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIMEZONE",
+  "parameterdisplayname": "MCU Time Zone",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Zone"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 197,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "d6902ea7-9cf3-44a2-889b-d61f25221ee3"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 16,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": false,
+  "parameternotifications": [
+    "525f213b-3058-4a70-a213-68655da7b6b2"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_BIGWIND_ALM",
+  "parameterdisplayname": "MCU Big wind alarm",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Big wind alarm"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 198,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "636b71bf-ebe4-43d2-8fe3-b54ad98d510a"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 17,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "84248002-0a8f-42fb-be5f-edac114c2a2c"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_CTR_BOX_QNTY",
+  "parameterdisplayname": "MCU Control Box quantity",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Control Box quantity"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 200,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "b3efcf0c-4055-4fe7-8889-493165f14003"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 1,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "e4b12454-01b0-4ad5-83da-ab713135610e"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_DEVICE_ADDR",
+  "parameterdisplayname": "Control box Device Address",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Device Address"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 201,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "bde92ce1-10ff-483d-8b95-a3edd13278f2"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 2,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "35f4fe88-5a17-4733-be43-187283b13566"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_COMM_STS",
+  "parameterdisplayname": "Control box Communication Status",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Communication Status"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 203,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "c2167424-b75e-4376-add5-cd7c981c205d"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 2,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": false,
+  "parameternotifications": [
+    "09f648a1-345d-4ec2-a088-1013c084c6f5",
+    "7b29fa97-7f9e-4a74-a2e1-d4250a08d49c"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_ALM",
+  "parameterdisplayname": "MCU Alarm",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Alarm"
+    }
+  ],
+  "parameterdatatype": 4,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 171,
+    "registerlength": 2,
+    "littleendian": false
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "48c6b0ee-c265-44a9-962c-7022a38896b1"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 3,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "927aab2f-407a-439c-bbe0-e75d064b21b8",
+    "36fc1638-844e-490c-b161-edd00e0bcfd6",
+    "f7b75544-8ee7-4eac-9b31-449994f5e50c",
+    "dcb578ce-6987-423c-96ec-5e5d18d6e512",
+    "2c055517-9353-461a-bfb6-d688061f9b10",
+    "0aa188e8-1bda-4e67-ac6a-ebda3cf77634",
+    "42f23358-2cea-4256-8846-fed6a71884f2"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_MOD",
+  "parameterdisplayname": "Control box Mode",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Mode"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 205,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "33d3f729-9f09-474a-bba1-b957553ecfa7"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 4,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": false,
+  "parameternotifications": [
+    "908d7ce3-ac0e-4e71-8c53-313e5cdf2714",
+    "85c38401-2a59-4d89-9fbb-63c814e26f45",
+    "bd721aa8-a5c3-46dc-8bf5-ebfaa008a42b",
+    "acfa3e2f-0825-416c-8543-def1c8460acd",
+    "03b33982-9379-4423-ac71-993613efa6d0",
+    "1041b5d6-59f1-4691-93d1-2818e79349b3",
+    "ed3be187-fae9-4ebf-8134-841f21e9ca10",
+    "c7400975-782a-47c8-86d1-a0d2d14ecfc6",
+    "704e4a04-d716-470a-8da2-afaa630b5384",
+    "153214b2-2823-40f2-b178-561aa48e84f0",
+    "95cf4e38-0738-430a-8204-137c24c7f402",
+    "de7242f8-d67f-4bef-864d-0c7417212664"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_FAILURE",
+  "parameterdisplayname": "Control box Failure",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Failure"
+    }
+  ],
+  "parameterdatatype": 4,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 206,
+    "registerlength": 2,
+    "littleendian": false
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "0fd1b010-64b3-4d9b-b81e-9235a9e4066b"
+},{
+  "parameterunit": "°(deg)",
+  "parametersortorder": 5,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "4919e1f3-8905-4291-90b5-064d4f8fd7ee"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_TRGT_ANG1",
+  "parameterdisplayname": "Control box Target Angle 1",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Target Angle 1"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 208,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "2807ab3c-8b34-42fd-ba31-4bdb57eb2f3d"
+},{
+  "parameterunit": "°(deg)",
+  "parametersortorder": 6,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "830a8886-6485-4a58-845f-dd788adaed0f"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_ACTUAL_ANG1",
+  "parameterdisplayname": "Control box Actual Angle 1",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Actual Angle 1"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 210,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "105d727a-30ba-4d56-ab1d-c56f0635cced"
+},{
+  "parameterunit": "A",
+  "parametersortorder": 7,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "204c0290-8d5b-4305-95fa-6914617d04fa"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_MTR_CRT1",
+  "parameterdisplayname": "Control box Motor Current 1",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Motor Current 1"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 213,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "c89f6af6-42b3-40e6-98e8-68b76359e2e9"
+},{
+  "parameterunit": "V",
+  "parametersortorder": 8,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "e1320fa3-7293-4609-b9f0-f9f491f39a4d"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_SMPS_VLT",
+  "parameterdisplayname": "Control box SMPS Voltage",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box SMPS Voltage"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 218,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "d3f91d3e-15a5-4b8b-ba71-696bab04654c"
+},{
+  "parameterunit": "V",
+  "parametersortorder": 9,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "ad7e5eb8-2b2e-4529-bbda-aedfdbe6602d"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_BATT_VLT",
+  "parameterdisplayname": "Control box Battery Voltage",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Battery Voltage"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 10,
+    "scaleoperator": 4
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 219,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "c8d7979e-3da5-490e-8ad5-4f78cb447b14"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 10,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "ce86f0ac-e448-4dec-b1bc-9a535ad3b1a5"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "CTRL_BOX_BATT_SOC",
+  "parameterdisplayname": "Control box Battery SOC",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "Control box Battery SOC"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 220,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "58bb92d1-42f1-48e0-ba97-1e7566d72fc9"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 4,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "da0687a8-1bf0-4cfb-8250-182efe6752f1"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_SET_WRK_MOD_FB",
+  "parameterdisplayname": "MCU Set the control box work mode for the Entire Block Feedback",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Set the control box work mode for the Entire Block Feedback"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 173,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "c361d970-af79-4f0b-9abc-1722d77171a2"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 5,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "a9af6286-d025-48a3-8c53-f63998fc9361"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIME_YR",
+  "parameterdisplayname": "MCU Time Year",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Year"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 174,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "9e6feb81-ef46-4d81-9fa9-5004d87055ec"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 6,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "11da5917-2f0b-4b14-ac9d-848f043271c1"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIME_MON",
+  "parameterdisplayname": "MCU Time Month",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Month"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 175,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "1b7287f9-0288-4a5f-8da7-f1e82ee18dd0"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 7,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "177d5143-e8c8-4b8b-85ae-0ee3429e6641"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIME_DATE",
+  "parameterdisplayname": "MCU Time Date",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Date"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 176,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "dce221e1-bbb1-451a-b24e-2f17230d7845"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 8,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "01339638-2083-4853-bbc8-8d55e5590809"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIME_HR",
+  "parameterdisplayname": "MCU Time Hour",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Hour"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 177,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "23e2e949-c858-4794-bb13-4cc673c5cbbd"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 9,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "b5777d13-32b6-4628-9531-b32b59658f33"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIME_MIN",
+  "parameterdisplayname": "MCU Time Minute",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Minute"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 178,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "6e1556b4-9f22-4f7e-a72a-175bd04652e0"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 10,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": true,
+  "parameternotifications": [
+    "c6850506-3672-4243-abf2-e57a78c68ab5"
+  ],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU1_TIME_SEC",
+  "parameterdisplayname": "MCU Time Second",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Time Second"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 179,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "f2cbb9e0-b3a5-4441-8a0c-269cd951f3d4"
+},{
+  "parameterunit": "-",
+  "parametersortorder": 3,
+  "parameterminvalue": null,
+  "parametermaxvalue": null,
+  "parameterdisplay": false,
+  "parameternotifications": [],
+  "parametersubscriptions": [
+    "jFpZosM7PLAI"
+  ],
+  "logpersecond": false,
+  "virtualparameter": false,
+  "updatedat": {
+    "$date": "2022-02-09T05:50:33.982Z"
+  },
+  "parametername": "MCU_SET_WRK_MOD_CMD",
+  "parameterdisplayname": "MCU Set the control box work mode for the Entire Block  Command",
+  "parameterdisplaylocale": [
+    {
+      "languageid": "777c104a-51d1-4bc9-8b1d-e934703d3dd0",
+      "text": "MCU Set the control box work mode for the Entire Block  Command"
+    }
+  ],
+  "parameterdatatype": 2,
+  "parameterscale": {
+    "scaleoperatorvalue": 1,
+    "scaleoperator": 3
+  },
+  "parameterprotocol": 1,
+  "parameterdefaultaggregate": 0,
+  "parametermodbusmeta": {
+    "registeraddress": 173,
+    "registerlength": 1,
+    "littleendian": true
+  },
+  "updatedby": "aruljothy(aruljyothi@armaxindia.com)",
+  "parameterid": "041d997c-23be-4555-893e-feabf639fd61"
+}]
