@@ -3,11 +3,15 @@ try {
     const app = express();
     const port = 3000;
     const { plantavailabilityreport } = require('./pareport_ACME.js')
+    const { gridavailabilityreport } = require('./gareport_ACME.js')
 
 
 
-    app.get("/", (req, res) => {
+    app.get("/pa", (req, res) => {
         plantavailabilityreport(req, res)
+    });
+    app.get("/ga", (req, res) => {
+        gridavailabilityreport(req, res)
     });
 
 
