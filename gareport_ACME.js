@@ -7,7 +7,6 @@ const devices = require("./mockdata/devices_acme.json");
 const blockdevicedata = require("./mockdata/blockdevicedatas.json");
 const blocks = require("./mockdata/blocks_acme.json");
 
-
 module.exports = {
     gridavailabilityreport: async (req, res) => {
         const listofdevices = lodash.sortBy(devices, "devicesortorder");
@@ -41,10 +40,8 @@ module.exports = {
 
                 const parameters = value[0];
                 let devicevalue = 0;
-                if (
-                    parameters.IS_HEALTHY == true
-                ) {
-                    devicevalue = parameters.PQM_FREQ
+                if (parameters.IS_HEALTHY == true) {
+                    devicevalue = parameters.PQM_FREQ;
                 } else {
                     devicevalue = 0;
                 }
@@ -57,23 +54,33 @@ module.exports = {
                         devicedata.devicemeta.devicetypeid === 7
                 )
             );
+
             const wmspoa = isNaN(
                 lodash.mean(
-                    Object.values(wmsvalue).filter(
-                        (x) => x.parameters.WMS_POA && x.parameters.WMS_POA !== "-"
-                    )
+                    Object.values(wmsvalue)
+                        .map((x) =>
+                            x.parameters.WMS_POA && x.parameters.WMS_POA !== "-"
+                                ? x.parameters.WMS_POA
+                                : undefined
+                        )
+                        .filter((d) => d !== undefined)
                 )
             )
                 ? 0
                 : lodash.mean(
-                    Object.values(wmsvalue).filter(
-                        (x) => x.parameters.WMS_POA && x.parameters.WMS_POA !== "-"
-                    )
+                    Object.values(wmsvalue)
+                        .map((x) =>
+                            x.parameters.WMS_POA && x.parameters.WMS_POA !== "-"
+                                ? x.parameters.WMS_POA
+                                : undefined
+                        )
+                        .filter((d) => d !== undefined)
                 );
             let unavailability = 0;
             if (wmspoa > 25) {
-                unavailability = Object.entries(devicedatavalue)
-                    .map(([dev, data]) => data <= 47 ? 1 : 0)
+                unavailability = Object.entries(devicedatavalue).map(([dev, data]) =>
+                    data <= 47 ? 1 : 0
+                );
             }
             return {
                 ...datavalue,
@@ -91,7 +98,7 @@ module.exports = {
             var deviceupTimecount = 0;
             var devicedownTimecount = 0;
             var totalInverterCount = 0;
-            const gridowntime = lodash.sumBy(data, 'Grid Unavailibility')
+            const gridowntime = lodash.sumBy(data, "Grid Unavailibility");
             data.map((datavalue) => {
                 if (datavalue.POA >= 25) {
                     TotalOperationHours = TotalOperationHours + 1;
@@ -111,24 +118,29 @@ module.exports = {
                         }
                     }
                 });
-
             });
-            const gridoperationhours = isNaN(TotalOperationHours - gridowntime) ? 0 : (TotalOperationHours - gridowntime)
-            const gatotalcalculatedvalue = isNaN(((gridoperationhours - gridowntime) / (TotalOperationHours * 100))) ? 0 : ((gridoperationhours - gridowntime) / (TotalOperationHours * 100));
+            const gridoperationhours = isNaN(TotalOperationHours - gridowntime)
+                ? 0
+                : TotalOperationHours - gridowntime;
+            const gatotalcalculatedvalue = isNaN(
+                (gridoperationhours - gridowntime) / (TotalOperationHours * 100)
+            )
+                ? 0
+                : (gridoperationhours - gridowntime) / (TotalOperationHours * 100);
             return {
                 Timestamp: date,
                 "Total Operation Hrs(Minute)": TotalOperationHours,
                 "OG Grid Operation Hrs(minute)": gridoperationhours,
-                "Grid Downtime(minute)": gridowntime,
-                "Grid Availability (%)": gatotalcalculatedvalue
+                "Grid Down(minute)": gridowntime,
+                "Grid Availability (%)": gatotalcalculatedvalue,
             };
         });
         const wb = XLSX.utils.book_new();
         const filename = "GA_Report.xlsx";
-        const PArawdata = XLSX.utils.json_to_sheet(rawdata);
-        XLSX.utils.book_append_sheet(wb, PArawdata, "Raw Data");
         const PAavailability = XLSX.utils.json_to_sheet(mainPAData);
         XLSX.utils.book_append_sheet(wb, PAavailability, "GA");
+        const PArawdata = XLSX.utils.json_to_sheet(rawdata);
+        XLSX.utils.book_append_sheet(wb, PArawdata, "Raw Data");
         const wb_opts = { bookType: "xlsx", type: "binary" };
         XLSX.writeFile(wb, filename, wb_opts);
         const stream = fs.createReadStream(filename);
@@ -144,7 +156,5 @@ module.exports = {
                 "yyyyMMddHHmmss"
             )}.xlsx`}`
         );
-    }
+    },
 };
-
-
