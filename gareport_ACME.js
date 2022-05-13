@@ -13,7 +13,7 @@ module.exports = {
         const blocksinfo = Object.fromEntries(
             blocks.map((x) => [x.blockid, x.blockdisplayname])
         );
-        const pqmdevices = Object.fromEntries(
+        const gapqmdevices = Object.fromEntries(
             listofdevices
                 .filter((f) => f.devicetypeid === 15)
                 .map((x) => [
@@ -21,7 +21,7 @@ module.exports = {
                     `${blocksinfo[x.blockid]} ${x.devicedisplayname}`,
                 ])
         );
-        var rawdata = blockdevicedata.map((data) => {
+        var garawdata = blockdevicedata.map((data) => {
             let datavalue = {
                 Timestamp: format(
                     new Date(data.localstarttimestamp),
@@ -29,7 +29,7 @@ module.exports = {
                 ),
             };
             var devicedatavalue = {};
-            Object.entries(pqmdevices).map(([deviceid, devicename]) => {
+            Object.entries(gapqmdevices).map(([deviceid, devicename]) => {
                 const value = Object.entries(data.devices)
                     .map(([devicedataid, devicedata]) => {
                         if (devicedataid == deviceid) {
@@ -90,10 +90,10 @@ module.exports = {
             };
         });
 
-        const PAdata = lodash.groupBy(rawdata, (x) =>
+        const GAdata = lodash.groupBy(garawdata, (x) =>
             format(new Date(x.Timestamp), "yyyy-mm-dd")
         );
-        const mainPAData = Object.entries(PAdata).map(([date, data]) => {
+        const mainGAData = Object.entries(GAdata).map(([date, data]) => {
             let TotalOperationHours = 0;
             var deviceupTimecount = 0;
             var devicedownTimecount = 0;
@@ -137,9 +137,9 @@ module.exports = {
         });
         const wb = XLSX.utils.book_new();
         const filename = "GA_Report.xlsx";
-        const PAavailability = XLSX.utils.json_to_sheet(mainPAData);
+        const PAavailability = XLSX.utils.json_to_sheet(mainGAData);
         XLSX.utils.book_append_sheet(wb, PAavailability, "GA");
-        const PArawdata = XLSX.utils.json_to_sheet(rawdata);
+        const PArawdata = XLSX.utils.json_to_sheet(garawdata);
         XLSX.utils.book_append_sheet(wb, PArawdata, "Raw Data");
         const wb_opts = { bookType: "xlsx", type: "binary" };
         XLSX.writeFile(wb, filename, wb_opts);

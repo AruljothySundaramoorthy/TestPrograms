@@ -4,7 +4,7 @@ try {
     const port = 3000;
     const { plantavailabilityreport } = require('./pareport_ACME.js')
     const { gridavailabilityreport } = require('./gareport_ACME.js')
-    const { getheatmap } = require('./heatmap_ACME.js')
+    const { getheatmap, getmockheatmap, getnoralPRreport } = require('./heatmap_ACME.js')
 
 
     app.use(express.json());
@@ -16,7 +16,10 @@ try {
         gridavailabilityreport(req, res)
     });
     app.get("/heatmap", (req, res) => {
-        getheatmap(req, res)
+        getmockheatmap(req, res)
+    });
+    app.get("/pr", (req, res) => {
+        getnoralPRreport(req, res)
     });
 
 

@@ -13,7 +13,7 @@ module.exports = {
         const blocksinfo = Object.fromEntries(
             blocks.map((x) => [x.blockid, x.blockdisplayname])
         );
-        const inverterdevices = Object.fromEntries(
+        const painverterdevices = Object.fromEntries(
             listofdevices
                 .filter((f) => f.devicetypeid === 3)
                 .map((x) => [
@@ -22,15 +22,15 @@ module.exports = {
                 ])
         );
 
-        var rawdata = blockdevicedata.map((data) => {
+        var parawdata = blockdevicedata.map((data) => {
             let datavalue = {
                 Timestamp: format(
                     new Date(data.localstarttimestamp),
                     "yyyy-MM-dd HH:MM"
                 ),
             };
-            var devicedatavalue = {};
-            Object.entries(inverterdevices).map(([deviceid, devicename]) => {
+            var padevicedatavalue = {};
+            Object.entries(painverterdevices).map(([deviceid, devicename]) => {
                 const value = Object.entries(data.devices)
                     .map(([devicedataid, devicedata]) => {
                         if (devicedataid == deviceid) {
@@ -53,35 +53,35 @@ module.exports = {
                     devicevalue = 0;
                 }
                 const newdata = { [devicename]: devicevalue };
-                devicedatavalue = { ...devicedatavalue, ...newdata };
+                padevicedatavalue = { ...padevicedatavalue, ...newdata };
             });
-            const wmsvalue = Object.fromEntries(
+            const pa_wmsvalue = Object.fromEntries(
                 Object.entries(data.devices).filter(
                     ([devicedataid, devicedata]) =>
                         devicedata.devicemeta.devicetypeid === 7
                 )
             );
-            const pqmvalue = Object.fromEntries(
+            const pa_pqmvalue = Object.fromEntries(
                 Object.entries(data.devices).filter(
                     ([devicedataid, devicedata]) =>
                         devicedata.devicemeta.devicetypeid === 15
                 )
             );
-            const wmspoa = isNaN(
+            const pa_wmspoa = isNaN(
                 lodash.mean(
-                    Object.values(wmsvalue)
+                    Object.values(pa_wmsvalue)
                         .map((x) => x.parameters.WMS_POA && x.parameters.WMS_POA !== "-")
                         .filter((d) => d !== undefined)
                 )
             )
                 ? 0
                 : lodash.mean(
-                    Object.values(wmsvalue)
+                    Object.values(pa_wmsvalue)
                         .map((x) => x.parameters.WMS_POA && x.parameters.WMS_POA !== "-")
                         .filter((d) => d !== undefined)
                 );
-            const pqmValue = lodash.sum(
-                Object.values(pqmvalue)
+            const pa_pqmValue = lodash.sum(
+                Object.values(pa_pqmvalue)
                     .map((x) =>
                         x.parameters.PQM_TOT_ACT_EXP && x.parameters.PQM_TOT_ACT_EXP !== "-"
                             ? x.parameters.PQM_TOT_ACT_EXP
@@ -90,24 +90,24 @@ module.exports = {
                     .filter((d) => d !== undefined)
             );
             let inverterrunning = 0;
-            if (wmspoa > 25) {
-                inverterrunning = Object.entries(devicedatavalue)
+            if (pa_wmspoa > 25) {
+                inverterrunning = Object.entries(padevicedatavalue)
                     .map(([dev, data]) => data)
                     .filter((x) => x == 1).length;
             }
             return {
                 ...datavalue,
-                ...devicedatavalue,
-                POA: wmspoa,
+                ...padevicedatavalue,
+                POA: pa_wmspoa,
                 "Inverter running": inverterrunning,
-                PQM: pqmValue ? pqmValue : 0,
+                PQM: pa_pqmValue ? pa_pqmValue : 0,
             };
         });
 
-        const PAdata = lodash.groupBy(rawdata, (x) =>
+        const padailydata = lodash.groupBy(parawdata, (x) =>
             format(new Date(x.Timestamp), "yyyy-mm-dd")
         );
-        const mainPAData = Object.entries(PAdata).map(([date, data]) => {
+        const rawpadata = Object.entries(padailydata).map(([date, data]) => {
             let TotalOperationHours = 0;
             var deviceupTimecount = 0;
             var devicedownTimecount = 0;
@@ -179,9 +179,9 @@ module.exports = {
         });
         const wb = XLSX.utils.book_new();
         const filename = "PA_Report.xlsx";
-        const PAavailability = XLSX.utils.json_to_sheet(mainPAData);
+        const PAavailability = XLSX.utils.json_to_sheet(rawpadata);
         XLSX.utils.book_append_sheet(wb, PAavailability, "PA");
-        const PArawdata = XLSX.utils.json_to_sheet(rawdata);
+        const PArawdata = XLSX.utils.json_to_sheet(parawdata);
         XLSX.utils.book_append_sheet(wb, PArawdata, "Raw Data");
         const wb_opts = { bookType: "xlsx", type: "binary" };
         XLSX.writeFile(wb, filename, wb_opts);
