@@ -39,7 +39,7 @@
     "node-schedule": "^2.1.0",
     "node-table-to-csv": "^0.1.0",
     "os": "^0.1.2",
-    "pdfkit-table": "^0.1.93",
+    "pdfkit-table": "^0.1.95",
     "random": "^3.0.6",
     "typescript": "^4.5.4",
     "uuid": "^8.3.2",

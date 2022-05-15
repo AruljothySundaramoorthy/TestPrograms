@@ -110,10 +110,12 @@ try {
                             prreal2: 0,
                         },
                     };
-                    const prtimestamp = Date.parse(
-                        subMinutes(starttime, plantmeta.prcalculation.printerval)
+                    const prtimestamp = format(
+                        subMinutes(starttime, plantmeta.prcalculation.printerval),
+                        "yyyyMMddHHmm"
                     );
-                    const lessertimestamp = Date.parse(starttime);
+
+                    const lessertimestamp = format(starttime, "yyyyMMddHHmm");
                     const listofdevices = [
                         devicetypeenum.PQM,
                         devicetypeenum.WMS,
@@ -137,9 +139,10 @@ try {
                     const erealsum = (devices, value, parametername) => {
                         const tempereal = Object.keys(devices).map((x) => {
                             const temapvalue =
-                                value.devices[x].parameters[
+                                value.devices[x] &&
+                                    value.devices[x].parameters[
                                     devices[x].energyexportparametername
-                                ] &&
+                                    ] &&
                                     value.devices[x].parameters[
                                     devices[x].energyexportparametername
                                     ] > 0
@@ -164,7 +167,9 @@ try {
                             try {
                                 const tofixedvalue = (valuesnumber) => {
                                     let number = 0;
-                                    number = parseFloat(valuesnumber.toFixed(3));
+                                    number = valuesnumber
+                                        ? parseFloat(valuesnumber.toFixed(3))
+                                        : 0;
                                     return number;
                                 };
                                 let lastereal = erealsum(
@@ -201,7 +206,7 @@ try {
                                 }
                                 currentereal = tofixedvalue(currentereal);
                                 lastereal = tofixedvalue(lastereal);
-                                let ereal = 0;
+                                let ereal = Math.random() * 10;
                                 if (
                                     currentereal - lastereal > 0 &&
                                     currentereal - lastereal < 3000
@@ -215,7 +220,7 @@ try {
                                         f.devicemeta.devicetypeid &&
                                         f.devicemeta.devicetypeid === devicetypeenum.WMS
                                 );
-                                const wmspoavalue = wmsdevices.map((x) => {
+                                const wmspoavalue = wmsdevices.map((wmsdevice) => {
                                     if (
                                         wmsdevice.parameters.IS_HEALTHY === true &&
                                         wmsdevice.parameters.WMS_POA &&
@@ -225,63 +230,66 @@ try {
                                     }
                                 });
                                 const wmswindspeed = isNaN(
-                                    lodash.sumBy(
-                                        wmsdevices.filter(
-                                            (x) =>
-                                                x.parameters.IS_HEALTHY === true &&
-                                                wmsdevice.parameters.WMS_POA &&
-                                                wmsdevice.parameters.WMS_POA > 0
-                                        ),
-                                        "WMS_POA"
+                                    lodash.sum(
+                                        wmsdevices
+                                            .filter(
+                                                (x) =>
+                                                    x.parameters.IS_HEALTHY === true &&
+                                                    x.parameters.WMS_POA &&
+                                                    x.parameters.WMS_POA > 0
+                                            )
+                                            .map((x) => x.parameters.WMS_POA)
                                     ) /
                                     wmsdevices.filter((x) => x.parameters.IS_HEALTHY === true)
                                         .length
                                 )
                                     ? 0
-                                    : lodash.sumBy(
-                                        wmsdevices.filter(
-                                            (x) =>
-                                                x.parameters.IS_HEALTHY === true &&
-                                                wmsdevice.parameters.WMS_WND_SPD &&
-                                                wmsdevice.parameters.WMS_WND_SPD > 0
-                                        ),
-                                        "WMS_WND_SPD"
+                                    : lodash.sum(
+                                        wmsdevices
+                                            .filter(
+                                                (x) =>
+                                                    x.parameters.IS_HEALTHY === true &&
+                                                    x.parameters.WMS_POA &&
+                                                    x.parameters.WMS_POA > 0
+                                            )
+                                            .map((x) => x.parameters.WMS_POA)
                                     ) /
                                     wmsdevices.filter((x) => x.parameters.IS_HEALTHY === true)
                                         .length;
                                 const wmsambienttemp = isNaN(
-                                    lodash.sumBy(
-                                        wmsdevices.filter(
-                                            (x) =>
-                                                x.parameters.IS_HEALTHY === true &&
-                                                wmsdevice.parameters.WMS_AMB_TEMP &&
-                                                wmsdevice.parameters.WMS_AMB_TEMP > 0
-                                        ),
-                                        "WMS_AMB_TEMP"
+                                    lodash.sum(
+                                        wmsdevices
+                                            .filter(
+                                                (x) =>
+                                                    x.parameters.IS_HEALTHY === true &&
+                                                    x.parameters.WMS_AMB_TEMP &&
+                                                    x.parameters.WMS_AMB_TEMP > 0
+                                            )
+                                            .map((x) => x.parameters.WMS_AMB_TEMP)
                                     ) /
                                     wmsdevices.filter((x) => x.parameters.IS_HEALTHY === true)
                                         .length
                                 )
                                     ? 0
-                                    : lodash.sumBy(
-                                        wmsdevices.filter(
-                                            (x) =>
-                                                x.parameters.IS_HEALTHY === true &&
-                                                wmsdevice.parameters.WMS_POA &&
-                                                wmsdevice.parameters.WMS_POA > 0
-                                        ),
-                                        "WMS_POA"
+                                    : lodash.sum(
+                                        wmsdevices
+                                            .filter(
+                                                (x) =>
+                                                    x.parameters.IS_HEALTHY === true &&
+                                                    x.parameters.WMS_AMB_TEMP &&
+                                                    x.parameters.WMS_AMB_TEMP > 0
+                                            )
+                                            .map((x) => x.parameters.WMS_AMB_TEMP)
                                     ) /
                                     wmsdevices.filter((x) => x.parameters.IS_HEALTHY === true)
                                         .length;
-                                console.log(wmswindspeed, wmsambienttemp);
                                 const wmsmoduletemp = wmsdevices.map((x) => {
-                                    if (wmsdevice.parameters.IS_HEALTHY === true) {
-                                        if (wmsdevice.parameters.WMS_MDL_TEMP1 > 0) {
-                                            return tofixedvalue(wmsdevice.parameters.WMS_MDL_TEMP1);
+                                    if (x.parameters.IS_HEALTHY === true) {
+                                        if (x.parameters.WMS_MDL_TEMP1 > 0) {
+                                            return tofixedvalue(x.parameters.WMS_MDL_TEMP1);
                                         }
-                                        if (wmsdevice.parameters.WMS_MDL_TEMP2 > 0) {
-                                            return tofixedvalue(wmsdevice.parameters.WMS_MDL_TEMP2);
+                                        if (x.parameters.WMS_MDL_TEMP2 > 0) {
+                                            return tofixedvalue(x.parameters.WMS_MDL_TEMP2);
                                         }
                                     }
                                 });
@@ -289,13 +297,14 @@ try {
                                     ? 0
                                     : tofixedvalue(lodash.meanBy(wmsmoduletemp));
                                 let temppoavalue = 0;
-                                calculatedpoavalue = tofixedvalue(lodash.sumBy(wmspoavalue)) || 0;
+                                calculatedpoavalue =
+                                    tofixedvalue(lodash.sumBy(wmspoavalue)) || 0;
                                 temppoavalue = calculatedpoavalue;
                                 if (calculatedpoavalue > 0) {
                                     calculatedpoavalue = calculatedpoavalue / wmspoavalue.length;
                                     temppoavalue = temppoavalue / wmspoavalue.length;
                                 }
-                                prdata.poa = tofixedvalue(temppoavalue);
+                                returndata.prdata.poa = tofixedvalue(temppoavalue);
                                 let gtireal = tofixedvalue(calculatedpoavalue) || 0;
                                 if (wmspoavalue.length > 0) {
                                     gtireal = gtireal / 60000;
@@ -313,7 +322,8 @@ try {
                                 let numeratorprreal2 =
                                     tofixedvalue(
                                         numeratorprreal1 *
-                                        (1 - plantmeta.prcalculation.modulelineardegradationfactor)
+                                        (1 -
+                                            plantmeta.prcalculation.modulelineardegradationfactor)
                                     ) || 0;
                                 let denaminator =
                                     tofixedvalue(
@@ -356,7 +366,6 @@ try {
                                         prreal,
                                         prreal1,
                                         prreal2,
-                                        poa,
                                         wmswindspeed,
                                         wmsambienttemp,
                                     },
@@ -378,28 +387,13 @@ try {
                     );
                 };
 
-                const padata = await prfunction(
-                    dbconnection,
-                    db,
-                    starttime,
-                    prpasettingdata.plantmeta,
-                    log,
-                    {
-                        lodash,
-                        addMinutes,
-                        format,
-                    },
-                    devicetypeenum
-                ).catch((e) => {
-                    log.error(e);
-                    return {};
-                });
-
                 const prdata = await prfunction(
                     dbconnection,
                     db,
                     starttime,
-                    referencetemperatureitem ? referencetemperatureitem.referencevalue : 0,
+                    referencetemperatureitem
+                        ? referencetemperatureitem.referencevalue
+                        : 0,
                     prpasettingdata.plantmeta,
                     log,
                     {
@@ -409,7 +403,7 @@ try {
                         format,
                     },
                     devicetypeenum,
-                    iredis,
+                    iredis
                 );
 
                 const tempprdata = {
@@ -417,9 +411,9 @@ try {
                     prtime: starttime,
                     prlocaltimestamp: addMinutes(
                         starttime,
-                        prpasettingdata.plantlocationmeta.timezone.utcOffset,
+                        prpasettingdata.plantlocationmeta.timezone.utcOffset
                     ),
-                    prtimestamp: parseInt(format(starttime, 'yyyyMMddHHmm'), 10),
+                    prtimestamp: parseInt(format(starttime, "yyyyMMddHHmm"), 10),
                     subdomain: SUBDOMAIN,
                 };
 
@@ -429,15 +423,14 @@ try {
             } catch (e) {
                 console.log(e);
             }
-
         } catch (e) {
-            console.log(e)
+            console.log(e);
         }
     };
 
     const callerfunction = async () => {
-        var startdate = new Date("2022-05-10 00:00:00");
-        for (let i = 0; i <= 4320; i++) {
+        var startdate = new Date("2022-05-09 00:08:00");
+        for (let i = 0; i <= 5500; i++) {
             startdate = addMinutes(startdate, 1);
             await checkfunction(startdate);
         }
