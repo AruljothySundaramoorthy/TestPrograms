@@ -25,11 +25,10 @@ const generatepdf = async (req, res) => {
         ];
         var doc = new PDFDocument({
             margin: 30,
-            // size: [100, 891],
+
             layout: "landscape",
         });
 
-        // file name
         doc.pipe(res);
         const exportdatatoPDFTable = async (dataArray, response) => {
             try {

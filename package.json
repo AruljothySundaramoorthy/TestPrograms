@@ -14,6 +14,7 @@
     "@armax_cloud/radiatics-models": "^1.0.0-beta.14",
     "@armax_cloud/yoko-models": "^1.0.0-beta.12",
     "axios": "^0.25.0",
+    "basic-ftp": "^4.6.6",
     "bublee": "^1.0.0",
     "cors": "^2.8.5",
     "cron-parser": "^4.2.1",
@@ -41,6 +42,7 @@
     "os": "^0.1.2",
     "pdfkit-table": "^0.1.95",
     "random": "^3.0.6",
+    "ssh2-sftp-client": "^8.1.0",
     "typescript": "^4.5.4",
     "uuid": "^8.3.2",
     "xlsx": "^0.17.5"

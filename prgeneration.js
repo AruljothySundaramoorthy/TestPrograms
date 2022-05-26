@@ -206,7 +206,7 @@ try {
                                 }
                                 currentereal = tofixedvalue(currentereal);
                                 lastereal = tofixedvalue(lastereal);
-                                let ereal = Math.random() * 10;
+                                let ereal = 0;
                                 if (
                                     currentereal - lastereal > 0 &&
                                     currentereal - lastereal < 3000
