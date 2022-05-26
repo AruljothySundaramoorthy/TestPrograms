@@ -6,7 +6,13 @@ var final = [1, 2, 3, 4, 10];
 // }
 
 
-const asd = final.map((i) => {
-    return i * 10
-})
-console.log(asd)
+const a = '10' //assignement
+
+// comparision - equality
+// == abstract equality
+// === struct equality
+if (a == 10) {
+    console.log(true)
+} else {
+    console.log(false)
+}

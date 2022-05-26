@@ -1,0 +1,223 @@
+[{
+  "_id": {
+    "$oid": "61f7d6a85d965045c2618041"
+  },
+  "organizationid": {
+    "$oid": "61f776ae78ebb0d39d73cfc6"
+  },
+  "plantname": "SB Solar Pvt. Limited",
+  "plantidentifier": "SBSPL",
+  "plantaddress": {
+    "street1": "#51 & 54, 2nd Cross, Vinayaga Layout",
+    "street2": "Andrahalli Main Road, Peenya 2nd Stage",
+    "city": "Bangalore",
+    "country": "India",
+    "state": "Karnataka",
+    "pincode": "560091",
+    "location": {
+      "latitude": 49.0091772,
+      "longitude": 15.4964585460245,
+      "googlemaplink": "https://goo.gl/maps/f1tYhipjgsJUqibr9"
+    }
+  },
+  "planttimezone": {
+    "name": "Asia/Kolkata",
+    "utcOffset": 330,
+    "dstOffset": 330
+  },
+  "plantstartdate": {
+    "$date": {
+      "$numberLong": "1643629992064"
+    }
+  },
+  "plantproductionstartdate": {
+    "$date": {
+      "$numberLong": "1643629992064"
+    }
+  },
+  "plantdailyproductionstarttime": {
+    "$date": {
+      "$numberLong": "1643629992064"
+    }
+  },
+  "plantdailyproductionendtime": {
+    "$date": {
+      "$numberLong": "1643629992064"
+    }
+  },
+  "plantmeta": {
+    "plantaccapacity": 2000,
+    "plantdccapacity": 2200,
+    "irradiationdeviation": 4,
+    "metervoltagereference": 20,
+    "moduletempcoefficient": 10,
+    "primarymeters": [
+      "6221cbae95c19c7003afe08c"
+    ],
+    "primarywms": [
+      "6221cbad95c19c7003afd8f1",
+      "6221cbad95c19c7003afd8fc",
+      "6221cbad95c19c7003afd907"
+    ]
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1643630306912"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1643630306912"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "61f7d6b35d965045c26180f2"
+  },
+  "organizationid": {
+    "$oid": "61f776ae78ebb0d39d73cfc6"
+  },
+  "plantname": "Asian Fab Solar Power Plant",
+  "plantidentifier": "AFSPP",
+  "plantaddress": {
+    "street1": "237C+974",
+    "city": "Karur",
+    "country": "India",
+    "state": "Tamil Nadu",
+    "pincode": "639116",
+    "location": {
+      "latitude": 11.012792,
+      "longitude": 78.0698307,
+      "googlemaplink": "https://goo.gl/maps/UA8eZUUVh7JNpxGf9"
+    }
+  },
+  "planttimezone": {
+    "name": "Asia/Kolkata",
+    "utcOffset": 330,
+    "dstOffset": 330
+  },
+  "plantstartdate": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantproductionstartdate": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantdailyproductionstarttime": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantdailyproductionendtime": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantmeta": {
+    "plantaccapacity": 300000,
+    "_id": {
+      "$oid": "61f7cfbba9d582016138e13b"
+    },
+    "othermeta": [],
+    "irradiationdeviation": 4,
+    "metervoltagereference": 20,
+    "plantdccapacity": 300000,
+    "moduletempcoefficient": 10,
+    "primarymeters": [
+      "6221cbde95c19c7003afe912"
+    ],
+    "primarywms": [
+      "6221cbdd95c19c7003afe177",
+      "6221cbdd95c19c7003afe18d",
+      "6221cbdd95c19c7003afe182"
+    ]
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1643630523888"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1643630523888"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "61f7d6bd5d965045c26181a5"
+  },
+  "organizationid": {
+    "$oid": "61f776ae78ebb0d39d73cfc6"
+  },
+  "plantname": "Tata Solar Plant Pavagada ",
+  "plantidentifier": "TSPP",
+  "plantaddress": {
+    "street1": "48Q7+7VC",
+    "city": "Palavalli",
+    "country": "India",
+    "state": "Karnataka",
+    "pincode": "572202",
+    "location": {
+      "latitude": 11.0729326,
+      "longitude": 78.4876207,
+      "googlemaplink": "https://goo.gl/maps/YKyhXm3xXvc6mkueA"
+    }
+  },
+  "planttimezone": {
+    "name": "Asia/Kolkata",
+    "utcOffset": 330,
+    "dstOffset": 330
+  },
+  "plantstartdate": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantproductionstartdate": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantdailyproductionstarttime": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantdailyproductionendtime": {
+    "$date": {
+      "$numberLong": "1643630317518"
+    }
+  },
+  "plantmeta": {
+    "plantaccapacity": 50000,
+    "_id": {
+      "$oid": "61f7d0a0a9d582016138e13f"
+    },
+    "othermeta": [],
+    "irradiationdeviation": 4,
+    "metervoltagereference": 20,
+    "plantdccapacity": 50000,
+    "moduletempcoefficient": 10,
+    "primarymeters": [
+      "6221cbe995c19c7003aff198"
+    ],
+    "primarywms": [
+      "6221cbe895c19c7003afe9fd",
+      "6221cbe895c19c7003afea08",
+      "6221cbe895c19c7003afea13"
+    ]
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1643630752870"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1643630752870"
+    }
+  }
+}]

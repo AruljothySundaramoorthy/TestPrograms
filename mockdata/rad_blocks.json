@@ -1,0 +1,289 @@
+[{
+  "_id": {
+    "$oid": "6221cbac95c19c7003afd865"
+  },
+  "plantid": {
+    "$oid": "61f7d6a85d965045c2618041"
+  },
+  "blockname": "BLK2",
+  "blockdisplayname": "Block2",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbac95c19c7003afd864"
+  },
+  "plantid": {
+    "$oid": "61f7d6a85d965045c2618041"
+  },
+  "blockname": "BLK1",
+  "blockdisplayname": "Block1",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbac95c19c7003afd866"
+  },
+  "plantid": {
+    "$oid": "61f7d6a85d965045c2618041"
+  },
+  "blockname": "BLK3",
+  "blockdisplayname": "Block3",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbac95c19c7003afd867"
+  },
+  "plantid": {
+    "$oid": "61f7d6a85d965045c2618041"
+  },
+  "blockname": "MCR",
+  "blockdisplayname": "MAIN CENTRAL  ROOM",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646381996724"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbdd95c19c7003afe0ea"
+  },
+  "plantid": {
+    "$oid": "61f7d6b35d965045c26180f2"
+  },
+  "blockname": "BLK1",
+  "blockdisplayname": "Block1",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382045363"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382045363"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbdd95c19c7003afe0eb"
+  },
+  "plantid": {
+    "$oid": "61f7d6b35d965045c26180f2"
+  },
+  "blockname": "BLK2",
+  "blockdisplayname": "Block2",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382045363"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382045363"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbdd95c19c7003afe0ec"
+  },
+  "plantid": {
+    "$oid": "61f7d6b35d965045c26180f2"
+  },
+  "blockname": "BLK3",
+  "blockdisplayname": "Block3",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382045363"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382045363"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbdd95c19c7003afe0ed"
+  },
+  "plantid": {
+    "$oid": "61f7d6b35d965045c26180f2"
+  },
+  "blockname": "MCR",
+  "blockdisplayname": "MAIN CENTRAL  ROOM",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382045364"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382045364"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbe895c19c7003afe970"
+  },
+  "plantid": {
+    "$oid": "61f7d6bd5d965045c26181a5"
+  },
+  "blockname": "BLK1",
+  "blockdisplayname": "Block1",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbe895c19c7003afe971"
+  },
+  "plantid": {
+    "$oid": "61f7d6bd5d965045c26181a5"
+  },
+  "blockname": "BLK2",
+  "blockdisplayname": "Block2",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbe895c19c7003afe973"
+  },
+  "plantid": {
+    "$oid": "61f7d6bd5d965045c26181a5"
+  },
+  "blockname": "MCR",
+  "blockdisplayname": "MAIN CENTRAL  ROOM",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6221cbe895c19c7003afe972"
+  },
+  "plantid": {
+    "$oid": "61f7d6bd5d965045c26181a5"
+  },
+  "blockname": "BLK3",
+  "blockdisplayname": "Block3",
+  "blockvirtual": false,
+  "blockstatus": {
+    "disable": false,
+    "hidden": false
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1646382056752"
+    }
+  }
+}]
