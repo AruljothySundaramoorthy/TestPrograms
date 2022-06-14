@@ -35,45 +35,7 @@ const validatemonth = (value) => {
 
     }
 }
-const validatemonthbynumber = (value) => {
-    switch (value) {
-        case '01':
-        case '1':
-            return 0;
-        case '02':
-        case '2':
-            return 1;
-        case '03':
-        case '3':
-            return 2;
-        case '04':
-        case '4':
-            return 3;
-        case '05':
-        case '5':
-            return 4;
-        case '06':
-        case '6':
-            return 5;
-        case '07':
-        case '7':
-            return 6;
-        case '08':
-        case '8':
-            return 7
-        case '09':
-        case '9':
-            return 8
-        case '10':
-
-            return 9;
-        case '11':
-            return 10;
-        case '12':
-            return 11;
-
-    }
-}
+ 
 const processor = async () => {
 
     // const datedata = ['1/7/2016',
@@ -457,7 +419,7 @@ const processor = async () => {
 
     // })
     const file = XLSX.readFile("files/AnnexureData.xlsx");
-
+k
     const AnnexurePPS = XLSX.utils.sheet_to_json(file.Sheets["PPS"]).map((pps) => {
         date = format(new Date(pps.Year, (validatemonth(pps.Month.toLowerCase()) - 1), 1), 'yyyy-MM-dd');
 

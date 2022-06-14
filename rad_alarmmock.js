@@ -30,14 +30,12 @@ const alarmdata = devices.map((device) => {
         plantid: plantinfo._id.$oid.toString(),
         blockid: blockinfo._id.$oid.toString(),
         deviceid: device._id.$oid.toString(),
-        alarmid: uuidv4(),
-        alarmdescription: 'test alarm',
-        alarmseverity: severity[Math.floor(Math.random() * 2)],
-        alarmstatus: alarmstatus[Math.floor(Math.random() * 1)],
-        alarmstartdatetime: new Date().getTime(),
-        alarmenddatetime: new Date().getTime(),
-        alarmacknowledgement: alarmack[Math.floor(Math.random() * 1)],
-        alarmcomments: alarmcomments[Math.floor(Math.random() * 4)]
+        eventid: uuidv4(),
+        eventdescription: 'test alarm',
+        eventseverity: severity[Math.floor(Math.random() * 2)],
+        eventstatus: alarmstatus[Math.floor(Math.random() * 1)],
+        eventdatetime: new Date().getTime(),
+        eventcomments: alarmcomments[Math.floor(Math.random() * 4)]
     }
 
 })
