@@ -22,7 +22,7 @@ try {
             "yyyyMMddHHmm",
             new Date()
         );
-        return Math.floor(differenceInMinutes(dateval, startdate) / 1440);
+        return Math.floor(differenceInMinutes(dateval, ,) / 1440);
     });
     let prdata = [];
     Object.values(parsedrawdata).forEach((data) => {
