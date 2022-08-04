@@ -2,7 +2,7 @@ try {
     const formidable = require('formidable');
     const express = require("express");
     const app = express();
-    const port = 3000;
+    const port = 3003;
     const dbengine = require("./dbengine");
     const { processor } = require('./excelparser');
     const stringify = require('csv-stringify');
@@ -44,10 +44,7 @@ try {
 
         stringify(data, { 
             
-            header: true, columns: {
-                year: 'birthYear',
-                phone: 'phone'
-            }
+            header: true
         }).pipe(res);
         res.setHeader('Content-Type', 'text/csv');
         res.setHeader(

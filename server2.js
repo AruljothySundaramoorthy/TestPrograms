@@ -1,36 +1,14 @@
-try {
-    const formidable = require('formidable');
+try { 
     const express = require("express");
     const app = express();
-    const port = 3000;
-    const dbengine = require("./dbengine");
-    const { processor } = require('./excelparser');
+    const port = 3002; 
+    const {plantavailabilityreport}=require('./pareport_ACME')
 
-    const datafunction = () => {
-        return true;
-    }
+   
     app.get("/", (req, res) => {
-        datafunction(req, res);
+        plantavailabilityreport(req, res);
     });
-    dbengine.connect();
-    app.post("/", async (req, res) => {
-        // datafunction(req, res);
-        const form = formidable({ multiples: false });
-        form.parse(req, async (err, fields, files) => {
-            if (err) {
-                next(err);
-                return;
-            }
-
-            try {
-                const { file } = files;
-                await processor(file.filepath);
-                res.send({ data: 'Process Completed', error: false });
-            } catch (error) {
-                res.status(400).send({ data: error.message, error: true });
-            }
-        });
-    });
+    
 
     app.listen(port, () => {
         console.log(`Example app listening at http://localhost:${port}`);
