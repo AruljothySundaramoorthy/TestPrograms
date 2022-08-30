@@ -9,6 +9,5 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/devicemeta.js"    }
-  ]
+      "program": "${workspaceFolder}/alerts.js"    }  ]
 }
