@@ -9,5 +9,5 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/alerts.js"    }  ]
+      "program": "${workspaceFolder}/generatorid.js"    }  ]
 }
