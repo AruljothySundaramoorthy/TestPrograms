@@ -1004,8 +1004,7 @@ try {
       "Content-Disposition",
       "attachment; filename=" + "Report.xlsx"
     );
-    workbook.xlsx.write(res).then(function (data) {
-      res.end();
+    workbook.xlsx.write(res).then(function (data) { 
       console.log("File write done........");
     });
   };
