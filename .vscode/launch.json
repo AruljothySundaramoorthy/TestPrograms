@@ -9,5 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/env.js"    }  ]
+      "program": "${workspaceFolder}/progressconversion.js"
+    }
+  ]
 }
