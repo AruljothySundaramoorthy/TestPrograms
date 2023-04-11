@@ -4,7 +4,6 @@ services:
     image: atmoz/sftp
     volumes:
       - ./upload:/home/foo/upload
-      # - ./ssh-key:/etc/ssh/ssh_host_rsa_key
     ports:
       - "2222:22"
     command: foo:pass:1001
