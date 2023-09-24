@@ -19,7 +19,6 @@ const userdata = [
     gender: "Male",
   },
   { id: 5, first_name: "Caty", email: "cthring4@forbes.com", gender: "Female" },
-  { id: 6, first_name: "Letty", email: "lsimco5@apple.com", gender: "Female" },
   {
     id: 7,
     first_name: "Selig",
@@ -5454,6 +5453,7 @@ const userdata = [
     email: "gsantryrr@furl.net",
     gender: "Female",
   },
+  { id: 6, first_name: "Letty", email: "lsimco5@apple.com", gender: "Female" },
 ];
 
 module.exports = { userdata };
